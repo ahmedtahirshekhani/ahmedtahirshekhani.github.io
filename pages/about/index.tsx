@@ -5,6 +5,8 @@ import HonorsAwardsSection from "../../components/honorsec";
 import ProfessionalDevSection from "../../components/professionaldev";
 import WorkExpSection from "../../components/workexp";
 import ProjectSection from "../../components/projects";
+import SkillSection from "../../components/skills";
+import ExtracurricularSec from "../../components/extracurriculars";
 
 const About = () => {
   return (
@@ -34,6 +36,11 @@ const About = () => {
         <div className="rounded-lg bg-white text-black p-2 my-5">
           <div className="text-3xl font-bold">Skills</div>
         </div>
+        <SkillSection />
+        <div className="rounded-lg bg-white text-black p-2 my-5">
+          <div className="text-3xl font-bold">Extracurricular</div>
+        </div>
+        <ExtracurricularSec />
       </div>
     </div>
   );
