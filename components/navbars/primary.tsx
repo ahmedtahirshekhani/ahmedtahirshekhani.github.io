@@ -52,7 +52,7 @@ const PrimaryNavbar = () => {
                 </ul>
               </li>
               <li>
-                <a>Contact Now</a>
+                <a href={"/contact"}>Contact Now!</a>
               </li>
             </ul>
           </div>
@@ -90,7 +90,9 @@ const PrimaryNavbar = () => {
           </ul>
         </div>
         <div className="navbar-end  hidden lg:flex">
-          <a className="btn">Contact Now!</a>
+          <a className="btn" href={"/contact"}>
+            Contact Now!
+          </a>
         </div>
       </div>
     </div>
