@@ -27,6 +27,7 @@ const Contact = () => {
                 href="mailto:ahmedtahir2000@gmail.com"
                 className="text-blue-700"
                 target={"_blank"}
+                rel="noreferrer"
               >
                 {"ahmedtahir2000@gmail.com"}
               </a>
@@ -49,6 +50,7 @@ const Contact = () => {
                 href="tel:0092-321-25-75665"
                 className="text-blue-700"
                 target="_blank"
+                rel="noreferrer"
               >
                 {"0092-321-25-75665"}
               </a>
@@ -72,6 +74,7 @@ const Contact = () => {
                 https://github.com/ahmedtahirshekhani"
                 className="text-blue-700"
                 target="_blank"
+                rel="noreferrer"
               >
                 {"ahmedtahirshekhani"}
               </a>
@@ -102,6 +105,7 @@ const Contact = () => {
                 href="https://www.linkedin.com/in/ahmedtahirshekhani/"
                 className="text-blue-700"
                 target="_blank"
+                rel="noreferrer"
               >
                 {"ahmedtahirshekhani"}
               </a>
@@ -154,6 +158,7 @@ const Contact = () => {
                 href="https://stackoverflow.com/users/12695074/ahmed-tahir-shekhani"
                 className="text-blue-700"
                 target="_blank"
+                rel="noreferrer"
               >
                 {"ahmedtahirshekhani"}
               </a>
