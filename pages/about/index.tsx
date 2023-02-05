@@ -7,7 +7,7 @@ import WorkExpSection from "../../components/workexp";
 import ProjectSection from "../../components/projects";
 import SkillSection from "../../components/skills";
 import ExtracurricularSec from "../../components/extracurriculars";
-
+import PrimaryFooter from "../../components/footers/primaryFooter";
 const About = () => {
   return (
     <div>
@@ -42,6 +42,7 @@ const About = () => {
         </div>
         <ExtracurricularSec />
       </div>
+      <PrimaryFooter />
     </div>
   );
 };
