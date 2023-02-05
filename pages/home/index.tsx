@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div className="container mx-auto my-10">
       <div className="p-10">
-        <div className="grid grid-cols-3 gap-4 mb-10">
+        <div className="md:grid md:grid-cols-3 md:gap-4 mb-10">
           <div>
             <ResumeImage />
           </div>

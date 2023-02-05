@@ -1,6 +1,6 @@
 const HonorsAwardsSection = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mx-2">
       <div className="flex flex-row">
         <div className="flex flex-col">
           <div className="font-bold">Dean's Honor List Award:</div>

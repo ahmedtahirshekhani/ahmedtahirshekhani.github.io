@@ -1,35 +1,35 @@
 const SkillSection = () => {
   return (
     <div>
-      <ul className="list-disc">
+      <ul className="list-disc mx-2">
         <li>
-          <span className="font-bold text-primary">Languages:</span> C, C++,
+          <span className="font-bold text-primary mx-2 text-justify">Languages:</span> C, C++,
           Javascript, Haskell, SQL, Python, Solidity, HTML, CSS, PHP
         </li>
         <li>
-          <span className="font-bold text-primary">Frameworks:</span> React,
+          <span className="font-bold text-primary mx-2 text-justify ">Frameworks:</span> React,
           Node, Express, Flask, Bootstrap, Tailwind, Next
         </li>
         <li>
-          <span className="font-bold text-primary">Tools:</span> Git, Docker,
+          <span className="font-bold text-primary mx-2 text-justify">Tools:</span> Git, Docker,
           AWS, GCP, Heroku, Postman, Jira, Figma, Google Colab, VS Code, Trello,
           Canva, Draw.io
         </li>
         <li>
-          <span className="font-bold text-primary">Databases:</span> MongoDB,
+          <span className="font-bold text-primary mx-2 text-justify">Databases:</span> MongoDB,
           MySQL, PostgreSQL, Firebase
         </li>
         <li>
-          <span className="font-bold text-primary">Blockchain: </span>Ethereum,
+          <span className="font-bold text-primary mx-2 text-justify">Blockchain: </span>Ethereum,
           Solidity, Truffle, Ganache, Remix, Metamask
         </li>
         <li>
-          <span className="font-bold text-primary">Digital Marketing:</span>{" "}
+          <span className="font-bold text-primary mx-2 text-justify">Digital Marketing:</span>{" "}
           Digital Ads, Adobe Photoshop, Illustrator, SEO, Keyword Research,
           Wordpress{" "}
         </li>
         <li>
-          <span className="font-bold text-primary">Interpersonal Skills: </span>{" "}
+          <span className="font-bold text-primary mx-2 text-justify">Interpersonal Skills: </span>{" "}
           Communication, Teamwork, Leadership, Problem-Solving, Adaptability,
           Creativity{" "}
         </li>

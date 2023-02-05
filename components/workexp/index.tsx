@@ -2,20 +2,20 @@ const WorkExpSection = () => {
   return (
     <div>
       <div>
-        <div className="grid grid-cols-3 gap-4">
-          <div className="col-span-2">
+        <div className="mx-2 md:grid md:grid-cols-3 gap-4">
+          <div className="col-span-2 ">
             <div className="text-2xl font-bold">
               10 Pearls - Software Company
             </div>
           </div>
           <div>
-            <div className="text-2xl font-medium">Jun 2022 - Aug 2022</div>
+            <div className="text-0.5xl md:text-2xl font-medium">Jun 2022 - Aug 2022</div>
           </div>
         </div>
-        <div className="italic">
+        <div className="italic mx-2">
           <div>Internship - Software Engineering</div>
         </div>
-        <ul className="list-disc my-3">
+        <ul className="list-disc my-3 mx-2 text-justify">
           <li>
             Designed a web-based application for travel itineraries on{" "}
             <strong className="text-primary">
@@ -41,20 +41,20 @@ const WorkExpSection = () => {
       </div>
 
       <div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="md:grid md:grid-cols-3 gap-4 mx-2">
           <div className="col-span-2">
-            <div className="text-2xl font-bold">
+            <div className="text-2xl font-bold ">
               Enzyme Digital - Marketing Agency
             </div>
           </div>
           <div>
-            <div className="text-2xl font-medium">Jun 2021 - Aug 2021</div>
+            <div className="text-0.5xl md:text-2xl font-medium">Jun 2021 - Aug 2021</div>
           </div>
         </div>
-        <div className="italic">
+        <div className="italic mx-2">
           <div>Internship - Website Development and UI/UX Design</div>
         </div>
-        <ul className="list-disc my-3">
+        <ul className="list-disc my-3 mx-2 text-justify">
           <li>
             Designed SEO-friendly and responsive{" "}
             <strong className="text-primary">

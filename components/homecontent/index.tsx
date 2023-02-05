@@ -1,9 +1,9 @@
 const HomeContent = () => {
   return (
-    <div className="home-content p-4 text-justify">
-      <h1 className="text-4xl font-bold my-3">Ahmed Tahir Shekhani</h1>
+    <div className="home-content p-4 ">
+      <h1 className="text-2xl text-center md:text-justify md:text-4xl md:justify-content font-bold my-3">Ahmed Tahir Shekhani</h1>
       <hr />
-      <div className="mt-5">
+      <div className="mt-5 text-justify">
         <p>
           A passionate and experienced{" "}
           <em>
@@ -20,7 +20,7 @@ const HomeContent = () => {
           clients to not look at my winners but look at my losers because they
           are very few ~ from The Wolf of Wall Street. I always believe in 100%
           quality service and time. Being an experienced strategist I can
-          provide you any guidance on text or live chat. So don`&apos;`t
+          provide you any guidance on text or live chat. So don't
           hesitate to contact me.
         </p>
       </div>
