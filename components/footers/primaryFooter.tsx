@@ -3,8 +3,8 @@ import Link from "next/link";
 const PrimaryFooter = () => {
   return (
     <div>
-      <footer className=" footer space-x-20  md:py-7 md:pl-20 bg-primary text-neutral-content ">
-        <div className=" font-bold  text-white text-lg md:pt-3 md:pl-20">
+      <footer className=" md:footer space-x-20  md:py-7 md:pl-20 bg-primary text-neutral-content ">
+        <div className=" font-bold text-center text-white md:text-lg md:pt-3 md:pl-20">
           <p>
             Phone: 
             <a
@@ -17,7 +17,7 @@ const PrimaryFooter = () => {
               </a>
           </p>
         </div>
-        <div className=" font-bold  text-white text-lg md:pt-3 md:pl-3">
+        <div className=" font-bold  text-white md:text-lg md:pt-3 md:pl-3">
         <p>
             Email: 
             <a
@@ -34,7 +34,7 @@ const PrimaryFooter = () => {
 
         <div >
           {/* <p className=" font-bold  text-white text-lg pt-2">Other</p> */}
-          <div className="flex flex-row items-center space-x-10 pl-5">
+          <div className="flex flex-row items-center space-x-10 pb-1 pl-5">
             <a 
               href="
               https://github.com/ahmedtahirshekhani"
