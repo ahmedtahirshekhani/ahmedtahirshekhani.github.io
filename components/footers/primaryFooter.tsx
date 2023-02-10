@@ -3,7 +3,7 @@ import Link from "next/link";
 const PrimaryFooter = () => {
   return (
     <div>
-      <footer className=" md:footer space-x-20  md:py-7 md:pl-20 bg-primary text-neutral-content ">
+      <footer className=" grid grid-cols-1 space-x-16 md:grid-cols-3 md:footer md:space-x-20  md:py-7 md:pl-20 bg-primary text-neutral-content">
         <div className=" font-bold text-center text-white md:text-lg md:pt-3 md:pl-20">
           <p>
             Phone: 
@@ -33,8 +33,7 @@ const PrimaryFooter = () => {
         </div>
 
         <div >
-          {/* <p className=" font-bold  text-white text-lg pt-2">Other</p> */}
-          <div className="flex flex-row items-center space-x-10 pb-1 pl-5">
+          <div className="flex ml-3 md:ml-0 space-x-10 pb-1 pl-5">
             <a 
               href="
               https://github.com/ahmedtahirshekhani"
