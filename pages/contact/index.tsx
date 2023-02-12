@@ -1,8 +1,15 @@
 import PrimaryNavbar from "../../components/navbars/primary";
 import PrimaryFooter from "../../components/footers/primaryFooter";
+import Head from "next/head";
 const Contact = () => {
   return (
     <div >
+      <>
+        <Head>
+          <title>Ahmed Tahir Shekhani</title>
+          <link rel="shortcut icon" href="/icon.ico" />
+        </Head>
+      </>
       <PrimaryNavbar />
       <div className="text-4xl font-bold text-center my-5">Contact Me!</div>
       

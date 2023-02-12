@@ -8,21 +8,32 @@ import ProjectSection from "../../components/projects";
 import SkillSection from "../../components/skills";
 import ExtracurricularSec from "../../components/extracurriculars";
 import PrimaryFooter from "../../components/footers/primaryFooter";
+import Head from "next/head";
 const About = () => {
   return (
     <div>
+      <>
+        <Head>
+          <title>Ahmed Tahir Shekhani</title>
+          <link rel="shortcut icon" href="/icon.ico" />
+        </Head>
+      </>
       <PrimaryNavbar />
       <div className="container mx-auto my-10">
-        <div className="rounded-lg bg-white text-black p-2 my-5 mx-2" >
+        <div className="rounded-lg bg-white text-black p-2 my-5 mx-2">
           <div className="text-2xl md:text-3xl font-bold">Education</div>
         </div>
         <EduSection />
         <div className="rounded-lg bg-white text-black p-2 my-5 mx-2">
-          <div className="text-2xl md:text-3xl font-bold ">Honors and Awards</div>
+          <div className="text-2xl md:text-3xl font-bold ">
+            Honors and Awards
+          </div>
         </div>
         <HonorsAwardsSection />
         <div className="rounded-lg bg-white text-black p-2 my-5 mx-2">
-          <div className="text-2xl md:text-3xl font-bold">Professional Development</div>
+          <div className="text-2xl md:text-3xl font-bold">
+            Professional Development
+          </div>
         </div>
         <ProfessionalDevSection />
         <div className="rounded-lg bg-white text-black p-2 my-5 mx-2">

@@ -2,9 +2,17 @@ import ResumeImage from "../../components/resumeimage";
 import HomeContent from "../../components/homecontent";
 import HomeSkills from "../../components/homecontent/skills";
 
+import Head from "next/head";
+
 const HomePage = () => {
   return (
     <div className="container mx-auto my-10">
+      <>
+        <Head>
+          <title>Ahmed Tahir Shekhani</title>
+          <link rel="shortcut icon" href="/icon.ico" />
+        </Head>
+      </>
       <div className="p-10">
         <div className="md:grid md:grid-cols-3 md:gap-4 mb-10">
           <div>
