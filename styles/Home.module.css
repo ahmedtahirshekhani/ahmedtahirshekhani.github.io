@@ -1,11 +1,11 @@
-.main {
+ .main {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+   flex-direction: column; 
+   justify-content: space-between; 
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-}
+} 
 
 .description {
   display: inherit;
@@ -172,6 +172,8 @@
     transform: none;
   }
 }
+
+
 
 /* Mobile */
 @media (min-width: 500px) {
