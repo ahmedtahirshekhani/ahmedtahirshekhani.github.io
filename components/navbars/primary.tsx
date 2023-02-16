@@ -38,7 +38,7 @@ const PrimaryNavbar = () => {
             Ahmed Tahir Shekhani
           </Link>
         </div>
-        <div className="text-white hidden lg:flex">
+        <div className="text-black hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
               <Link href={"/about"}>About Me</Link>
