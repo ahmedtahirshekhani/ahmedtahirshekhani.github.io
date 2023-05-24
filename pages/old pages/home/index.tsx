@@ -31,6 +31,7 @@ const HomePage = () => {
           <HomeSkills />
         </div>
       </div>
+      
     </div>
   );
 };
