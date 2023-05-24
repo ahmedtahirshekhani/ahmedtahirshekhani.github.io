@@ -1,13 +1,13 @@
-import PrimaryNavbar from "../../components/navbars/primary";
-import HomeSkills from "../../components/homecontent/skills";
-import EduSection from "../../components/education/edusection";
-import HonorsAwardsSection from "../../components/honorsec";
-import ProfessionalDevSection from "../../components/professionaldev";
-import WorkExpSection from "../../components/workexp";
-import ProjectSection from "../../components/projects";
-import SkillSection from "../../components/skills";
-import ExtracurricularSec from "../../components/extracurriculars";
-import PrimaryFooter from "../../components/footers/primaryFooter";
+import PrimaryNavbar from "../../../components/navbars/primary";
+import HomeSkills from "../../../components/homecontent/skills";
+import EduSection from "../../../components/education/edusection";
+import HonorsAwardsSection from "../../../components/honorsec";
+import ProfessionalDevSection from "../../../components/professionaldev";
+import WorkExpSection from "../../../components/workexp";
+import ProjectSection from "../../../components/projects";
+import SkillSection from "../../../components/skills";
+import ExtracurricularSec from "../../../components/extracurriculars";
+import PrimaryFooter from "../../../components/footers/primaryFooter";
 import Head from "next/head";
 const About = () => {
   return (
