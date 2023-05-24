@@ -14,7 +14,7 @@ const HomePage = () => {
           <link rel="shortcut icon" href="/icon.ico" />
         </Head>
       </>
-      <Image className="w-screen absolute" src={background} alt="" />
+      <Image className="w-full absolute top-0 left-0 h-5/6" src={background} alt="" />
       <div className="flex absolute z-10 flex-col gap-y-6">
         <h1 className="w-3/4 text-9xl ml-48 mt-48 font-roboto font-bold">Discover the Potential</h1>
 
