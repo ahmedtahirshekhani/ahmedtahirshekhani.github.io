@@ -11,7 +11,10 @@ module.exports = {
       roboto: ["Roboto", "sans-serif"],
     },
     colors: {
-      footercolor: '#1E1E1E'
+      footercolor: '#1E1E1E',
+      linecolor:'#FFFFFF',
+      secondaryText: '#0D9488',
+      primaryBackground: '#000000'
     }
     
   },
