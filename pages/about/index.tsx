@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import background from "../../assets/images/background/background.png"
 import shekaniNew from "../../assets/images/shekani_new.jpg"
+import Education from "../../components/education";
 
 
 // import HomeSkills from "../../../components/homecontent/skills";
@@ -39,11 +40,12 @@ const About = () => {
           <p>I am a solution to your problem. I tell my clients to not look at my winners but look at my losers because they are very few ~ from The Wolf of Wall Street </p>
           <p>I always believe in 100% quality service and time. Being an experienced strategist I can provide you any guidance on text or live chat. So don't hesitate to contact me.</p>
         </div>
-
-       
-
-        
       </div>
+      <div className="absolute z-10">
+        <Education></Education>
+      </div>
+
+
     </div>
   );
 };
