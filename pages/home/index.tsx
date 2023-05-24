@@ -1,37 +1,34 @@
 // import ResumeImage from "../../components/resumeimage";
 // import HomeContent from "../../components/homecontent";
 // import HomeSkills from "../../components/homecontent/skills";
+import background from "../../assets/images/background/background.png"
+import Image from "next/image";
 
 import Head from "next/head";
-
 const HomePage = () => {
   return (
-    <div className="container mx-auto my-10">
-      {/* <>
+    <div>
+      <>
         <Head>
           <title>Ahmed Tahir Shekhani</title>
           <link rel="shortcut icon" href="/icon.ico" />
         </Head>
       </>
-      <div className="p-10">
-        <div className="md:grid md:grid-cols-3 md:gap-4 mb-10">
-          <div>
-            <ResumeImage />
-          </div>
-          <div className="col-span-2">
-            <HomeContent />
-          </div>
-        </div>
-        <div>
-          <div className="rounded-lg bg-primary text-black p-2 my-5">
-            <h1 className="text-3xl font-bold">My Skills</h1>
-          </div>
-          <h1 className="text-2xl font-medium m-4">Languages:</h1>
+      <Image className="w-screen absolute" src={background} alt="" />
+      <div className="flex absolute z-10 flex-col gap-y-6">
+        <h1 className="w-3/4 text-9xl ml-48 mt-48 font-roboto font-bold">Discover the Potential</h1>
 
-          <HomeSkills />
+        <button className="bg-white text-teal-600 py-2 rounded-[7px] ml-48 w-36">
+        <div className="flex flex-row">
+          <div className="text-lg font-semibold ml-4">
+            EXPLORE
+          </div>
+          <i className="fa-sharp fa-solid fa-arrow-right text-teal-600 text-[20px] ml-5 mt-1"></i>
         </div>
-      </div> */}
-      <h1>Kabir here </h1>
+        </button>
+
+        
+      </div>
     </div>
   );
 };

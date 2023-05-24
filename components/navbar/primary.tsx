@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const PrimaryNavbar = () => {
   return (
-    <div className="flex flex-row gap-x-96 m-6">
+    <div className="flex flex-row gap-x-96 m-6 absolute z-10">
       {/* <div className="navbar bg-primary text-primary-content">
         <div className="navbar-start">
           <div className="dropdown">
