@@ -1,8 +1,8 @@
-import PrimaryNavbar from "../../../components/Old components/navbars/primary";
+import PrimaryNavbar from "../../../components/navbars/primary";
 import HomeSkills from "../../../components/homecontent/skills";
 import EduSection from "../../../components/education/edusection";
 import HonorsAwardsSection from "../../../components/honorsec";
-import ProfessionalDevSection from "../../../components/Old components/professionaldev";
+import ProfessionalDevSection from "../../../components/professionaldev";
 import WorkExpSection from "../../../components/workexp";
 import ProjectSection from "../../../components/projects";
 import SkillSection from "../../../components/skills";
