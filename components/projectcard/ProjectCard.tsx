@@ -1,13 +1,24 @@
 import Image from 'next/image';
 import dispalyPic from '../../assets/images/project/project.png';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 
 
-const ProjectCard = (props:any) => {
+const ProjectCard = (props: any) => {
   let description = props.data.description;
   let heading = props.data.heading;
   let image = props.data.image;
+
+  const router:any = useRouter();
+
+  const handleClick = () => {
+
+    router.push({
+      pathname: '/individualprojects',
+      query: props.data,
+    });
+  };
 
   return (
     <div className="w-[400px] h-[450px]">
@@ -24,21 +35,12 @@ const ProjectCard = (props:any) => {
           {description}
         </p>
         <div className='w-full mt-2 text-right'>
-        <button className="bg-secondaryText text-linecolor py-2 mx-3 rounded-[7px] w-40">
-          <div className="flex flex-row">
-          <Link
-              className="normal-case w-28 text-xl font-roboto font-normal  hover:font-bold hover:underline underline-offset-3"
-              href={{
-                pathname: '/individualprojects',
-                query: {data:props.data}
-              }}
-              as="/individualprojects"
-            >
-            <div className="text-lg font-semibold ml-4">Read More</div>
-            </Link>
-            <i className="fa-sharp fa-solid fa-arrow-right text-linecolor text-[20px] ml-5 mt-1"></i>
-          </div>
-        </button>
+          <button className="bg-secondaryText text-linecolor py-2 mx-3 rounded-[7px] w-40" onClick={handleClick}>
+            <div className="flex flex-row">
+              <div className="text-lg font-semibold ml-4">Read More</div>
+              <i className="fa-sharp fa-solid fa-arrow-right text-linecolor text-[20px] ml-5 mt-1"></i>
+            </div>
+          </button>
         </div>
       </div>
     </div>

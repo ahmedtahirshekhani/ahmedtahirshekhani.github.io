@@ -2,12 +2,26 @@ import background from '../../assets/images/background/background.png';
 import Image from 'next/image';
 import ProjectCard from '../../components/projectcard/ProjectCard';
 import Head from 'next/head';
+import dispalyPic from '../../assets/images/project/project.png';
 
 import PrimaryFooter from '../../components/footer/primaryFooter';
 import Productsp from '../../assets/data/data';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
+
 const HomePage = () => {
   let dataFull = Productsp.slice(0, 3)
+  const router = useRouter();
+
+  const handleClick = (data: any) => {
+    router.push({
+      pathname: '/individualprojects',
+      query: { data: JSON.stringify(data) }
+    });
+  };
+
+
   return (
     <div>
       <>
@@ -18,7 +32,7 @@ const HomePage = () => {
       </>
       <div>
         <Image
-          className="w-screen absolute z-0 h-[800px] top-0 left-0"
+          className="w-screen absolute z-0 h-screen top-0 left-0"
           src={background}
           alt=""
         />
@@ -39,7 +53,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-[800px]"></div>
+      <div className="w-full h-screen"></div>
       <div className="w-full bg-linecolor h-[800px]">
         <h1 className="text-secondaryText text-7xl font-bold p-5 ml-16">
           Projects
@@ -49,28 +63,50 @@ const HomePage = () => {
             ? dataFull.map((data: any) => {
               return (
                 <div>
-                  <ProjectCard data={data}></ProjectCard>
-
+                  <div className="w-[400px] h-[450px]">
+                    <div className="border-2 bg-linecolor border-primaryBackground w-[340px] h-[405px] rounded-3xl text-center shadow-[30px_30px_0_0_rgba(0,0,0,0.2)] hover:w-[350px] hover:h-[415px] ">
+                      <Image
+                        className="rounded-t-3xl border-b-2 border-primaryBackground"
+                        src={dispalyPic}
+                        alt="project display picture"
+                      />
+                      <h1 className="text-5xl text-secondaryText mt-4 font-bold ">
+                        {data.heading}
+                      </h1>
+                      <p className="text-2xl h-20 text-primaryBackground text-left w-[430px] mx-4 mt-3">
+                        {data.description}
+                      </p>
+                      <div className='w-full mt-2 text-right'>
+                        <button className="bg-secondaryText text-linecolor py-2 mx-3 rounded-[7px] w-40" onClick={() => handleClick(data)}>
+                          <div className="flex flex-row">
+                            <div className="text-lg font-semibold ml-4">Read More</div>
+                            <i className="fa-sharp fa-solid fa-arrow-right text-linecolor text-[20px] ml-5 mt-1"></i>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               );
             })
             : ''}
         </div>
-        <div className='w-full text-center'>
+        <div className='w-full text-center pb-12'>
           <Link
-            className="normal-case w-24 text-xl font-roboto font-normal hover:font-bold hover:underline underline-offset-3"
+            className="normal-case w-24 text-xl font-roboto font-normal"
             href={'/projectsDisplay'}
           >
-            <button className="bg-secondaryText text-linecolor py-2 rounded-[7px] w-52 h-16">
+            <button className="bg-secondaryText text-linecolor py-2 rounded-[10px] w-52 h-16 hover:text-secondaryText hover:bg-linecolor hover:outline">
               <div className="flex flex-row">
-                <div className="text-3xl  ml-3 ">
+                <div className="text-3xl ml-4">
                   See More
                 </div>
-                <i className="fa-sharp fa-solid fa-arrow-right text-linecolor text-[35px] ml-5 mt-1"></i>
+                <i className="pt-0.5 a-sharp fa-solid fa-arrow-right  text-[35px] ml-5 "></i>
               </div>
             </button>
           </Link>
         </div>
+        <PrimaryFooter></PrimaryFooter>
       </div>
     </div>
   );

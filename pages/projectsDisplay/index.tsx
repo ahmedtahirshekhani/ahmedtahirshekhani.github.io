@@ -39,24 +39,4 @@ const ProjectsDisplay = () => {
 
 export default ProjectsDisplay;
 
-{/* <div className="w-full h-[800px]"></div>
-      <div className='mx-44'>
-        <h1 className="text-6xl font-bold font-roboto mt-20 text-secondaryText">BitGift</h1>
-        <p className='text-roboto text-lg'>A crypto-currency gifting application.</p>
 
-        <div className='flex flex-col mt-10 font-roboto gap-y-10'>
-            <div>
-                <h1 className='text-secondaryText text-2xl '>Description</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu, ultricies vel nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor elit. Proin tempus,.apien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.</p>
-            </div>
-            <div>
-                <h1 className='text-secondaryText text-2xl '>Technology Used</h1>
-                <p>MERN stack, MetaMask </p>
-            </div>
-            <div>
-                <h1 className='text-secondaryText text-2xl '>Duration</h1>
-                <p>Aug 2022- Dec 2022</p>
-            </div>
-
-        </div>
-      </div> */}

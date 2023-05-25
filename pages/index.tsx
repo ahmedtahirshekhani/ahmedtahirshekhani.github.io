@@ -7,10 +7,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <PrimaryNavbar />
-      <div className="">
         <HomePage />
-      </div>
-      <PrimaryFooter/>
     </div>
   );
 };
