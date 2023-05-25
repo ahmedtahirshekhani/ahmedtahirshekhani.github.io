@@ -4,11 +4,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import background from '../../assets/images/background/background.png';
 import shekaniNew from '../../assets/images/shekani_new.jpg';
-import Education from '../../components/education';
 import PrimaryFooter from '../../components/footer/primaryFooter';
-import Work from '../../components/workexperience';
-import Skills from '../../components/skills';
-import Extracurr from '../../components/extracurriculars/Extracurr';
+import ProjectsSlider from '../../components/projetsSlider/ProjectsSlider';
 
 const ProjectsDisplay = () => {
   return (
@@ -72,6 +69,10 @@ const ProjectsDisplay = () => {
             </div>
 
         </div>
+        <ProjectsSlider></ProjectsSlider>
+
+
+
       </div>
       <PrimaryFooter></PrimaryFooter>
     </div>
