@@ -13,7 +13,7 @@ module.exports = {
     colors: {
       footercolor: '#1E1E1E',
       linecolor:'#FFFFFF',
-      secondaryText: '#0D9488',
+      secondaryText: '#0090A3',
       primaryBackground: '#000000'
     }
     

@@ -6,7 +6,7 @@ const PrimaryFooter = () => {
     <div>
       <footer className="w-full relative bottom-0 bg-footercolor text-center">
         <div className="my-5">
-          <h1 className="font-bold text-3xl mt-16 pt-7">CONTACT ME</h1>
+          <h1 className="font-bold text-3xl  pt-7">CONTACT ME</h1>
         </div>
         <div className="flex text-2xl  mx-96">
           <div className="flex flex-row gap-5 my-2 ml-28 mr-24">
