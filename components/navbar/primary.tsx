@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 const PrimaryNavbar = () => {
   return (
-    <div className="flex flex-row gap-x-96 m-6 absolute z-20">
+    <div className="flex flex-row gap-x-96 m-6 absolute z-20 font-montserrat">
       <div className="w-44">
         <Link
-          className="normal-case  text-3xl font-roboto font-light"
+          className="normal-case  text-3xl montserrat font-light"
           href={'/'}
         >
           Ahmed Tahir Shekhani
@@ -15,7 +15,7 @@ const PrimaryNavbar = () => {
         <div className='w-24'>
           <button>
             <Link
-              className="normal-case w-20 text-xl font-roboto font-normal hover:font-bold hover:underline underline-offset-3"
+              className="normal-case w-20 text-xl montserrat font-normal hover:font-bold hover:underline underline-offset-3"
               href={'/'}
             >
               Home
@@ -25,7 +25,7 @@ const PrimaryNavbar = () => {
         <div className='w-24'>
           <button>
             <Link
-              className="normal-case w-28 text-xl font-roboto font-normal  hover:font-bold hover:underline underline-offset-3"
+              className="normal-case w-28 text-xl montserrat font-normal  hover:font-bold hover:underline underline-offset-3"
               href={'/about'}
             >
               About me
@@ -35,7 +35,7 @@ const PrimaryNavbar = () => {
         <div className='w-24'>
           <button>
             <Link
-              className="normal-case w-24 text-xl font-roboto font-normal hover:font-bold hover:underline underline-offset-3"
+              className="normal-case w-24 text-xl montserrat font-normal hover:font-bold hover:underline underline-offset-3"
               href={'/projectsDisplay'}
             >
               Projects
@@ -44,7 +44,7 @@ const PrimaryNavbar = () => {
         </div>
         <div className='w-24'>
           <button
-            className="m-0 p-0 normal-case w-24 text-xl font-roboto font-normal hover:font-bold hover:underline underline-offset-3"
+            className="m-0 p-0 normal-case w-24 text-xl montserrat font-normal hover:font-bold hover:underline underline-offset-3"
             onClick={() => {
               window.scrollTo({
                 top: Math.max(
