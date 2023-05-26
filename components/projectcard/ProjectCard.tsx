@@ -34,8 +34,8 @@ const ProjectCard = (props: any) => {
         <p className="text-2xl h-20 text-primaryBackground text-left w-[430px] mx-4 mt-3">
           {description}
         </p>
-        <div className='w-full mt-2 text-right'>
-          <button className="bg-secondaryText text-linecolor py-2 mx-3 rounded-[7px] w-40" onClick={handleClick}>
+        <div className='w-full mt-2 text-right  hover:text-secondaryText hover:bg-linecolor hover:outline'>
+          <button className="bg-secondaryText text-linecolor py-2 mx-3 rounded-[7px] w-40 " onClick={handleClick}>
             <div className="flex flex-row">
               <div className="text-lg font-semibold ml-4">Read More</div>
               <i className="fa-sharp fa-solid fa-arrow-right text-linecolor text-[20px] ml-5 mt-1"></i>

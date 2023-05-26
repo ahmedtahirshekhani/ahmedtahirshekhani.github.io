@@ -32,18 +32,18 @@ const HomePage = () => {
       </>
       <div>
         <Image
-          className="w-screen absolute z-0 h-screen top-0 left-0"
+          className="w-full absolute z-0 h-[800px] top-0 left-0"
           src={background}
           alt=""
         />
         <div className="absolute z-10">
-          <div className="flex flex-col gap-y-6 ml-48 mt-48">
+          <div className="flex flex-col gap-y-6 ml-56 mt-56">
             <h1 className="w-3/4 text-9xl font-roboto font-bold">
               Discover the Potential
             </h1>
             <Link className='' href={'/projectsDisplay'}>
 
-              <button className="bg-linecolor text-secondaryText py-2 rounded-[7px] w-36 hover:bg-secondaryText hover:text-linecolor">
+              <button className="bg-linecolor text-secondaryText py-2 mt-10 rounded-[7px] w-36 hover:bg-secondaryText hover:text-linecolor">
                 <div className="flex flex-row">
                   <div className="text-lg font-semibold ml-4">EXPLORE</div>
                   <i className="fa-sharp fa-solid fa-arrow-right text-[20px] ml-5 mt-1"></i>
@@ -53,7 +53,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-screen"></div>
+      <div className="w-full h-[800px]"></div>
       <div className="w-full bg-linecolor h-[800px]">
         <h1 className="text-secondaryText text-7xl font-bold p-5 ml-16">
           Projects
@@ -62,7 +62,7 @@ const HomePage = () => {
           {dataFull && dataFull.length > 0
             ? dataFull.map((data: any) => {
               return (
-                <div>
+                <div key={data.id}>
                   <div className="w-[400px] h-[450px]">
                     <div className="border-2 bg-linecolor border-primaryBackground w-[340px] h-[405px] rounded-3xl text-center shadow-[30px_30px_0_0_rgba(0,0,0,0.2)] hover:w-[350px] hover:h-[415px] ">
                       <Image
@@ -76,11 +76,11 @@ const HomePage = () => {
                       <p className="text-2xl h-20 text-primaryBackground text-left w-[430px] mx-4 mt-3">
                         {data.description}
                       </p>
-                      <div className='w-full mt-2 text-right'>
-                        <button className="bg-secondaryText text-linecolor py-2 mx-3 rounded-[7px] w-40" onClick={() => handleClick(data)}>
-                          <div className="flex flex-row">
+                      <div className='w-full mt-2 text-right '>
+                        <button className="bg-secondaryText text-linecolor py-2 mx-3 rounded-[7px] hover:text-secondaryText hover:bg-linecolor hover:outline w-40" onClick={() => handleClick(data)}>
+                          <div className="flex flex-row ">
                             <div className="text-lg font-semibold ml-4">Read More</div>
-                            <i className="fa-sharp fa-solid fa-arrow-right text-linecolor text-[20px] ml-5 mt-1"></i>
+                            <i className="fa-sharp fa-solid fa-arrow-right text-[20px] ml-5 mt-1"></i>
                           </div>
                         </button>
                       </div>
