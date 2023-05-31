@@ -21,7 +21,7 @@ const ProjectCard = (props: any) => {
   };
 
   return (
-    <div className="w-[400px] h-[450px]">
+    <div className="w-[400px] h-[450px] font-montserrat">
       <div className="border-2 bg-linecolor border-primaryBackground w-[340px] h-[405px] rounded-3xl text-center shadow-[30px_30px_0_0_rgba(0,0,0,0.2)] hover:w-[350px] hover:h-[415px] ">
         <Image
           className="rounded-t-3xl border-b-2 border-primaryBackground"

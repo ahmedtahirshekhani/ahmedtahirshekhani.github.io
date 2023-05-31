@@ -12,7 +12,7 @@ import Extracurr from '../../components/extracurriculars/Extracurr';
 
 const About = () => {
   return (
-    <div className="bg-primaryBackground">
+    <div className="bg-primaryBackground font-montserrat">
       <>
         <Head>
           <title>Ahmed Tahir Shekhani</title>
@@ -22,18 +22,18 @@ const About = () => {
       <PrimaryNavbar />
       <div>
         <Image
-          className="w-screen absolute z-0 h-[800px] top-0 left-0"
+          className="w-screen absolute z-0 h-[500px] md:h-[800px] top-0 left-0"
           src={background}
           alt=""
         />
-        <div className="flex absolute z-10 flex-row gap-x-20 mt-48 ml-48">
-          <div className="avatar md:pl-10 md:ml-3">
-            <div className="rounded-full w-96 h-96">
+        <div className="md:flex absolute z-10 md:flex-row md:gap-x-20 pt-24 md:mt-48 md:ml-48 ">
+          <div className="avatar ml-[28%] md:pl-10 md:ml-3">
+            <div className="rounded-full w-44 md:w-96 ">
               <Image src={shekaniNew} alt="Ahmed Tahir Shekhani" />
             </div>
           </div>
 
-          <div className="flex flex-col gap-y-10 w-1/2 pt-12 text-lg">
+          <div className="flex flex-col gap-y-10 w-96 md:w-1/2 pt-12 px-8 text-center md:text-left text-lg">
             <p>
               A passionate and experienced FULL-STACK DEVELOPER and a DIGITAL
               MARKETING CONSULTANT who can solve your technical problem in the
@@ -52,8 +52,8 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-[800px]"></div>
-      <div className='mx-44'>
+      <div className="w-full h-[950px] md:h-[800px]"></div>
+      <div className="md:mx-44">
         <Education></Education>
         <Work></Work>
         <Skills></Skills>

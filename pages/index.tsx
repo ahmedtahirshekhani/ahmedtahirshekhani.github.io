@@ -8,6 +8,7 @@ const Home: NextPage = () => {
     <div>
       <PrimaryNavbar />
         <HomePage />
+      <PrimaryFooter></PrimaryFooter>
     </div>
   );
 };

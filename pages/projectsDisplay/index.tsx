@@ -9,7 +9,7 @@ import ProjectsSlider from '../../components/projetsSlider/ProjectsSlider';
 
 const ProjectsDisplay = () => {
   return (
-    <div className="bg-primaryBackground">
+    <div className="bg-primaryBackground font-montserrat">
       <>
         <Head>
           <title>Ahmed Tahir Shekhani</title>

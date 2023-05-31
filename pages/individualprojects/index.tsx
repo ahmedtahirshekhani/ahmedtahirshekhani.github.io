@@ -49,7 +49,7 @@ const IndividualProjects = (props: any) => {
   }, [showImage]);
 
   return (
-    <div>
+    <div className='font-montserrat'>
       <>
         <Head>
           <title>Ahmed Tahir Shekhani</title>
@@ -59,16 +59,16 @@ const IndividualProjects = (props: any) => {
       <PrimaryNavbar />
       <div>
         <Image
-          className="w-screen absolute z-0 h-[800px] top-0 left-0"
+          className="w-screen absolute z-0 h-[600px] md:h-[800px] top-0 left-0"
           src={background}
           alt=""
         />
       </div>
 
-      <div className="absolute z-10 mt-40 ml-80 flex flex-row justify-center content-center">
+      <div className="absolute z-10 mt-40 md:ml-80 flex flex-row justify-center content-center mx-2">
         <button>
           <i
-            className="fa-solid fa-arrow-left text-linecolor text-[30px] mr-10 ml-5 "
+            className="fa-solid fa-arrow-left text-linecolor text-[30px] mr-2 md:mr-10 md:ml-5 "
             onClick={decrement}
           ></i>
         </button>
@@ -85,29 +85,29 @@ const IndividualProjects = (props: any) => {
             <Image
               src={images[currentIndex]}
               alt="Image"
-              className="rounded-t-xl border-b-2 border-primaryBackground w-[1000px] h-[590px] rounded-3xl"
+              className="rounded-t-xl border-b-2 border-primaryBackground md:w-[1000px] h-[350px] md:h-[590px] rounded-3xl"
             />
           </Transition>
         </div>
         <button>
           <i
-            className="fa-solid fa-arrow-right text-linecolor text-[30px] ml-10"
+            className="fa-solid fa-arrow-right text-linecolor text-[30px] ml-2 md:ml-10"
             onClick={increment}
           ></i>
         </button>
       </div>
 
       <div className="bg-primaryBackground">
-        <div className="w-full h-[800px] bg-primaryBackground"></div>
-        <div className="mx-44 pb-28">
-          <h1 className="text-6xl font-bold font-roboto mt-20 text-secondaryText">
+        <div className="w-full h-[600px] md:h-[800px] bg-primaryBackground"></div>
+        <div className="mx-10 md:mx-44 pb-28">
+          <h1 className="text-4xl md:text-6xl font-bold md:mt-20 text-secondaryText">
             {parsedData.heading}
           </h1>
-          <p className="text-roboto text-lg">
+          <p className=" text-lg">
             A crypto-currency gifting application.
           </p>
 
-          <div className="flex flex-col mt-10 font-roboto gap-y-10">
+          <div className="flex flex-col mt-10 gap-y-10">
             <div>
               <h1 className="text-secondaryText text-2xl ">Description</h1>
               <p>{parsedData.description}.</p>

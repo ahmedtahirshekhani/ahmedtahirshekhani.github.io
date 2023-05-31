@@ -3,14 +3,14 @@ import Link from "next/link";
 
 const PrimaryFooter = () => {
   return (
-    <div>
+    <div className="font-montserrat">
       <footer className="w-full relative bottom-0 bg-footercolor text-center">
-        <div className="my-5">
-          <h1 className="font-bold text-3xl pt-7">CONTACT ME</h1>
+        <div className="my-3 md:my-5">
+          <h1 className="font-bold text-2xl md:text-3xl pt-3 md:pt-7">CONTACT ME</h1>
         </div>
-        <div className="flex text-2xl  mx-96">
-          <div className="flex flex-row gap-5 my-2 ml-28 mr-24">
-            <i className="fa-solid fa-phone text-white text-[28px] ml-5 mt-1"></i>
+        <div className="flex text-xs font-bold md:text-2xl  md:mx-3 justify-center md:mx-96">
+          <div className="flex flex-row gap-2 md:gap-5 my-2  md:mr-24">
+            <i className="fa-solid fa-phone text-white text-[15px] md:text-[28px] md:ml-5 md:mt-1"></i>
             <a
               href="tel:0092-321-25-75665"
               className="text-black"
@@ -21,8 +21,8 @@ const PrimaryFooter = () => {
             </a>
           </div>
 
-          <div className="flex flex-row gap-5 my-2">
-            <i className="fa-solid fa-envelope text-white text-[28px] ml-5 mt-1"></i>
+          <div className="flex flex-row  gap-2 md:gap-5 my-2">
+            <i className="fa-solid fa-envelope text-white text-[15px] md:text-[28px] ml-5 md:mt-1"></i>
             <a
               href="mailto:ahmedtahir2000@gmail.com"
               className="text-black"
@@ -33,8 +33,8 @@ const PrimaryFooter = () => {
             </a>
           </div>
         </div>
-        <div className="ml-[43%] pb-7">
-          <div className="flex ml-3 my-5 md:ml-0 space-x-14 pb-1 pl-5">
+        <div className=" pb-7 ">
+          <div className="flex  my-5  space-x-14 pb-1 justify-center ">
             <a
               href="
               https://github.com/ahmedtahirshekhani"
