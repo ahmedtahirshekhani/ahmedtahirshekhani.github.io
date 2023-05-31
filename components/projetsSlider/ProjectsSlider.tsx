@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Productsp from '../../assets/data/data';
-import ProjectCard from '../projectcard/ProjectCard';
 import dispalyPic from '../../assets/images/project/project.png';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
