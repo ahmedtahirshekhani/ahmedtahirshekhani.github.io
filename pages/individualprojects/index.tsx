@@ -9,7 +9,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 
-const IndividualProjects = (props: any) => {
+const IndividualProjects = () => {
   let images: any = [dispalyPic];
   const router = useRouter();
   const { data }: any = router.query;
