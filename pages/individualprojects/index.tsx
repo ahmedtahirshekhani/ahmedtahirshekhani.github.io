@@ -42,7 +42,7 @@ const IndividualProjects = () => {
     }, 5000); // Transition delay in milliseconds
 
     return () => clearInterval(interval);
-  }, [showImage]);
+  }, [images.length, showImage]);
 
   return (
     <div className='font-montserrat'>
