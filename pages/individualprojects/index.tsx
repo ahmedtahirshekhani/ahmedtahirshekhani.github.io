@@ -11,11 +11,12 @@ import { Transition } from '@headlessui/react';
 
 const IndividualProjects = () => {
   let images: any = [dispalyPic];
+  const [parsedData, setParsedData] = useState<any>();
   const router = useRouter();
   const { data }: any = router.query;
   try {
-    const parsedData = JSON.parse(data);
-  } catch (e:any) {
+    setParsedData(JSON.parse(data));
+  } catch (e: any) {
     // The line below run only if an error happened.
     console.log('Message: ', e.message);
   }
@@ -50,7 +51,7 @@ const IndividualProjects = () => {
   }, [images.length, showImage]);
 
   return (
-    <div className='font-montserrat'>
+    <div className="font-montserrat">
       <>
         <Head>
           <title>Ahmed Tahir Shekhani</title>
@@ -101,17 +102,20 @@ const IndividualProjects = () => {
       <div className="bg-primaryBackground">
         <div className="w-full h-[600px] md:h-[800px] bg-primaryBackground"></div>
         <div className="mx-10 md:mx-44 pb-28">
-          <h1 className="text-4xl md:text-6xl font-bold md:mt-20 text-secondaryText">
-            {parsedData.heading}
-          </h1>
-          <p className=" text-lg">
-            A crypto-currency gifting application.
-          </p>
+          {parsedData ? (
+            <h1 className="text-4xl md:text-6xl font-bold md:mt-20 text-secondaryText">
+              {parsedData.heading}
+            </h1>
+          ) : (
+            []
+          )}
+
+          <p className=" text-lg">A crypto-currency gifting application.</p>
 
           <div className="flex flex-col mt-10 gap-y-10">
             <div>
               <h1 className="text-secondaryText text-2xl ">Description</h1>
-              <p>{parsedData.description}.</p>
+              {parsedData ? <p>{parsedData.description}.</p> : []}
             </div>
             <div>
               <h1 className="text-secondaryText text-2xl ">Technology Used</h1>
