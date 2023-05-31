@@ -9,7 +9,14 @@ module.exports = {
     fontFamily: {
       poppins: ["Poppins", "sans-serif"],
       roboto: ["Roboto", "sans-serif"],
+      montserrat: ["Montserrat", "sans-serif"]
     },
+    colors: {
+      footercolor: '#1E1E1E',
+      linecolor:'#FFFFFF',
+      secondaryText: '#0090A3',
+      primaryBackground: '#000000'
+    }
     
   },
   

@@ -1,17 +1,15 @@
-import type { NextPage } from "next";
-import PrimaryNavbar from "../components/navbars/primary";
-import HomePage from "./home";
-import PrimaryFooter from "../components/footers/primaryFooter";
+import type { NextPage } from 'next';
+import PrimaryNavbar from '../components/navbar/primary';
+import HomePage from './home';
+import PrimaryFooter from '../components/footer/primaryFooter';
 
 const Home: NextPage = () => {
   return (
-	<div>
+    <div>
       <PrimaryNavbar />
-    <div className="container mx-auto">
-	  <HomePage />
+        <HomePage />
+      <PrimaryFooter></PrimaryFooter>
     </div>
-      <PrimaryFooter />
-	</div>
   );
 };
 

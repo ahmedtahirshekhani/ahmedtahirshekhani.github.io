@@ -1,41 +1,118 @@
-const SkillSection = () => {
+const Skills = () => {
   return (
-    <div>
-      <ul className="list-disc mx-2">
-        <li>
-          <span className="font-bold text-primary mx-2 text-justify">Languages:</span> C, C++,
-          Javascript, Haskell, SQL, Python, Solidity, HTML, CSS, PHP
-        </li>
-        <li>
-          <span className="font-bold text-primary mx-2 text-justify ">Frameworks:</span> React,
-          Node, Express, Flask, Bootstrap, Tailwind, Next
-        </li>
-        <li>
-          <span className="font-bold text-primary mx-2 text-justify">Tools:</span> Git, Docker,
-          AWS, GCP, Heroku, Postman, Jira, Figma, Google Colab, VS Code, Trello,
-          Canva, Draw.io
-        </li>
-        <li>
-          <span className="font-bold text-primary mx-2 text-justify">Databases:</span> MongoDB,
-          MySQL, PostgreSQL, Firebase
-        </li>
-        <li>
-          <span className="font-bold text-primary mx-2 text-justify">Blockchain: </span>Ethereum,
-          Solidity, Truffle, Ganache, Remix, Metamask
-        </li>
-        <li>
-          <span className="font-bold text-primary mx-2 text-justify">Digital Marketing:</span>{" "}
-          Digital Ads, Adobe Photoshop, Illustrator, SEO, Keyword Research,
-          Wordpress{" "}
-        </li>
-        <li>
-          <span className="font-bold text-primary mx-2 text-justify">Interpersonal Skills: </span>{" "}
-          Communication, Teamwork, Leadership, Problem-Solving, Adaptability,
-          Creativity{" "}
-        </li>
-      </ul>
+    <div className="m-10 font-montserrat">
+      <h1 className="text-3xl font-bold text-white">Skills</h1>
+      <div className="w-full h-0.5 bg-linecolor"></div>
+      <div>
+        <div className="flex gap-1 mt-10">
+          <h1 className="font-bold text-sm md:text-xl text-secondaryText">
+            Languages
+          </h1>
+        </div>
+        <div className=" grid grid-cols-4 text-sm md:text-l ">
+          <p className="font-normal">C</p>
+          <p className="font-normal">C++</p>
+          <p className="font-normal">JavaScript</p>
+          <p className="font-normal">TypeScript</p>
+          <p className="font-normal">Haskell</p>
+          <p className="font-normal">SQL</p>
+          <p className="font-normal">Python</p>
+          <p className="font-normal">Solidity</p>
+        </div>
+      </div>
+      <div>
+        <div className="flex gap-1 mt-10">
+          <h1 className="font-bold text-sm md:text-xl text-secondaryText">Frameworks</h1>
+        </div>
+        <div className=" grid grid-cols-3 md:grid-cols-4 text-sm md:text-l ">
+          <p className="font-normal">React JS</p>
+          <p className="font-normal">Express JS</p>
+          <p className="font-normal">Angular JS</p>
+          <p className="font-normal">Next JS</p>
+          <p className="font-normal">Node JS</p>
+          <p className="font-normal">Flask</p>
+          <p className="font-normal">MongoDB</p>
+          <p className="font-normal">Django</p>
+        </div>
+      </div>
+      <div>
+        <div className="flex gap-1 mt-10">
+          <h1 className="font-bold text-sm md:text-xl text-secondaryText">Developer Tools</h1>
+        </div>
+        <div className=" grid  grid-cols-4 md:grid-cols-4 text-sm md:text-l">
+          <p className="font-normal">Git</p>
+          <p className="font-normal">Firebase</p>
+          <p className="font-normal">Miro</p>
+          <p className="font-normal">Trello</p>
+          <p className="font-normal">Draw.io</p>
+          <p className="font-normal">Canva</p>
+{/* 
+          <p className="font-normal">AWS</p>
+          <p className="font-normal">Postman</p>
+          <p className="font-normal">Heroku</p>
+          <p className="font-normal">Docker</p>
+          <p className="font-normal">GCP</p>
+          <p className="font-normal">Jira</p>
+          <p className="font-normal">Figma</p>
+          <p className="font-normal">VS code</p>
+          <p className="font-normal">Google Collab</p> */}
+        </div>
+      </div>
+      {/* <div>
+        <div className="flex gap-1 mt-10">
+          <h1 className="font-bold text-sm md:text-xl text-secondaryText">Databases</h1>
+        </div>
+        <div className=" grid grid-cols-2 md:grid-cols-4 text-sm md:text-l">
+          <p className="font-normal">MongoDB</p>
+          <p className="font-normal">mySQL</p>
+          <p className="font-normal">PostgreSQL</p>
+          <p className="font-normal">FireBase</p>
+        </div>
+      </div> */}
+      {/* <div>
+        <div className="flex gap-1 mt-10">
+          <h1 className="font-bold text-sm md:text-xl text-secondaryText">Blockchain</h1>
+        </div>
+        <div className=" grid grid-cols-3 md:grid-cols-4 text-sm md:text-l ">
+          <p className="font-normal">Ethereum</p>
+          <p className="font-normal">Truffle</p>
+          <p className="font-normal">Ganache</p>
+          <p className="font-normal">Remix</p>
+          <p className="font-normal">solidity</p>
+          <p className="font-normal">Metamask</p>
+        </div>
+      </div> */}
+      <div>
+        <div className="flex gap-1 mt-10">
+          <h1 className="font-bold text-sm md:text-xl text-secondaryText">
+            Digital Marketing
+          </h1>
+        </div>
+        <div className=" grid grid-cols-2 md:grid-cols-4 text-sm md:text-l">
+          <p className="font-normal">Digital Ads</p>
+          <p className="font-normal">Adobe Photoshop</p>
+          <p className="font-normal">Adobe Illustrator</p>
+          <p className="font-normal">SEO</p>
+          <p className="font-normal">Keyword Research</p>
+          <p className="font-normal">Wordpress</p>
+        </div>
+      </div>
+      <div>
+        <div className="flex gap-1 mt-10">
+          <h1 className="font-bold text-sm md:text-xl text-secondaryText">
+            Interpersonal Skills
+          </h1>
+        </div>
+        <div className=" grid grid-cols-2 md:grid-cols-4 text-sm md:text-l">
+          <p className="font-normal">Communication</p>
+          <p className="font-normal">Teamwork</p>
+          <p className="font-normal">Leadership</p>
+          <p className="font-normal">Conscientiousness</p>
+          <p className="font-normal">Passionate Learner</p>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default SkillSection;
+export default Skills;
