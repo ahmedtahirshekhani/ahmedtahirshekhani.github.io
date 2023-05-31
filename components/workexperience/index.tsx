@@ -48,27 +48,18 @@ const Work = () => {
           <div className="flex flex-row gap-2">
             <i className="fa-solid fa-circle text-white text-[8px]  mt-2"></i>
             <p className="font-normal text-sm md:text-l ">
-              Designed a web-based application for travel itineraries on Angular
-              13 with Express as backend and Mongo as Database following the MVC
-              design pattern where we were first supposed to clear requirements
-              and design the architecture. We used the Agile method for
-              development, ensuring industry best practices.
+              Designed a web-based travel itinerary application using Angular 13, Express and Mongo, following
+              MVC design pattern and industry best practices. Utilized domain-driven and test-driven approach,
+              achieving 90% test coverage with Jest for unit testing.
             </p>
           </div>
           <div className="flex flex-row gap-2">
             <i className="fa-solid fa-circle text-white text-[8px]  mt-2"></i>
             <p className="font-normal text-sm md:text-l ">
-              Used domain-driven and test-driven approach, with coverage of
-              90%throughout the development module where we used Jest for unit
-              testing for Angular component.
-            </p>
-          </div>
-          <div className="flex flex-row gap-2">
-            <i className="fa-solid fa-circle text-white text-[8px]  mt-2"></i>
-            <p className="font-normal text-sm md:text-l ">
-              Developed a report display component with i18n for a top US-based
-              security company portal in two days.Explained the code design to
-              colleagues so they can start.
+
+              Developed a component for a top US-based security company portal in 2 days, using Agile method and
+              i18n translation for the report display component. Explained the codebase to colleagues for better
+              understanding
             </p>
           </div>
         </div>
@@ -94,18 +85,9 @@ const Work = () => {
           <div className="flex flex-row gap-2">
             <i className="fa-solid fa-circle text-white text-[8px]  mt-2"></i>
             <p className="font-normal text-sm md:text-l ">
-              Acquired 100% authentic web traffic by integrating Facebook Pixel
-              and Google tag to avoid double firing and inaccurate ROAS on Ads
-              Manager through JavaScript code where other developers had no
-              experience.
-            </p>
-          </div>
-          <div className="flex flex-row gap-2">
-            <i className="fa-solid fa-circle text-white text-[8px]  mt-2"></i>
-            <p className="font-normal text-sm md:text-l ">
-              Reduced 50% of the employee time by developing a React Based
-              Application which completes the 4 hours long daily repetitive task
-              in just 2 hours.
+              Improved 100% web traffic accuracy while integrating Facebook Pixel and Google tag, and reduced
+              employee time developing a React-based application to automate a 4-hour daily task, cutting time in
+              half
             </p>
           </div>
           <div className="flex flex-row gap-2">
