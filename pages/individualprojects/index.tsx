@@ -13,7 +13,12 @@ const IndividualProjects = () => {
   let images: any = [dispalyPic];
   const router = useRouter();
   const { data }: any = router.query;
-  const parsedData = JSON.parse(data);
+  try {
+    const parsedData = JSON.parse(data);
+  } catch (e:any) {
+    // The line below run only if an error happened.
+    console.log('Message: ', e.message);
+  }
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showImage, setShowImage] = useState(true);
