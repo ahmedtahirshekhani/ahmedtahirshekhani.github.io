@@ -12,25 +12,18 @@ import { useEffect, useState } from 'react';
 
 const HomePage = () => {
 
-  const [dataFull, setDataFull] = useState(Productsp.slice(0, 3))
+  const [dataFull, setDataFull] = useState<any>()
   const router = useRouter();
 
   useEffect(() => {
+
+    if (window.innerWidth < 768) {
+      setDataFull(Productsp.slice(0, 2)) // Set the number of items to 1 for mobile screens
+    } else {
+      setDataFull(Productsp.slice(0, 3)) // Set the number of items to 3 for desktop screens
+    }
     const handleResize = () => {
-      console.log('here');
-
-      if (window.innerWidth < 768) {
-        setDataFull(Productsp.slice(0, 2)) // Set the number of items to 1 for mobile screens
-      } else {
-        setDataFull(Productsp.slice(0, 3)) // Set the number of items to 3 for desktop screens
-      }
     };
-
-    // Attach the event listener to window resize
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup the event listener on component unmount
-    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const handleClick = (data: any) => {

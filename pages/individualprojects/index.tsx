@@ -2,10 +2,6 @@ import background from '../../assets/images/background/background.png';
 import Image from 'next/image';
 import Head from 'next/head';
 import dispalyPic from '../../assets/images/project/project.png';
-import shekhaniNew from '../../assets/images/shekani_new.jpg';
-import ahmed from '../../assets/images/ahmed.png';
-import ahmed2 from '../../assets/images/ahmed2.jpg';
-import ahmed3 from '../../assets/images/ahmed3.jpg';
 import PrimaryFooter from '../../components/footer/primaryFooter';
 import { useRouter } from 'next/router';
 import PrimaryNavbar from '../../components/navbar/primary';
@@ -14,7 +10,7 @@ import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 
 const IndividualProjects = (props: any) => {
-  let images: any = [dispalyPic, shekhaniNew, ahmed, ahmed2, ahmed3];
+  let images: any = [dispalyPic];
   const router = useRouter();
   const { data }: any = router.query;
   const parsedData = JSON.parse(data);

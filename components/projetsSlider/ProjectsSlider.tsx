@@ -12,21 +12,13 @@ const ProjectsSlider = () => {
   const router = useRouter();
 
   useEffect(() => {
-    const handleResize = () => {
-      console.log('here');
+    console.log('here');
 
-      if (window.innerWidth < 768) {
-        setEnd(1); // Set the number of items to 1 for mobile screens
-      } else {
-        setEnd(3); // Set the number of items to 3 for desktop screens
-      }
-    };
-
-    // Attach the event listener to window resize
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup the event listener on component unmount
-    return () => window.removeEventListener('resize', handleResize);
+    if (window.innerWidth < 768) {
+      setEnd(1); // Set the number of items to 1 for mobile screens
+    } else {
+      setEnd(3); // Set the number of items to 3 for desktop screens
+    }
   }, []);
 
   const increment = () => {
