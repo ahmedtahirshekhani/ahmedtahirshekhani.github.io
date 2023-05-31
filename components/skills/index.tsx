@@ -89,7 +89,7 @@ const Skills = () => {
         <div className=" grid grid-cols-2 md:grid-cols-4 text-sm md:text-l">
           <p className="font-normal">Digital Ads</p>
           <p className="font-normal">Adobe Photoshop</p>
-          <p className="font-normal">Illustrator</p>
+          <p className="font-normal">Adobe Illustrator</p>
           <p className="font-normal">SEO</p>
           <p className="font-normal">Keyword Research</p>
           <p className="font-normal">Wordpress</p>

@@ -12,9 +12,9 @@ const Education = () => {
         </div>
         <div className="text-secondaryText">
           <h1 className="font-bold text-sm md:text-l ">Sep 2019 - June 2023</h1>
-          <h1 className="font-bold text-sm md:text-l">cGPA - 3.75</h1>
+          <h1 className="font-bold text-sm md:text-l">cGPA - 3.77</h1>
         </div>
-        <div className=" gap-1 my-1 md:my-2">
+        <div className=" gap-1 my-2 md:my-2">
           <h1 className="font-normal text-sm md:text-l ">Courses:</h1>
         </div>
         <div className=" grid grid-cols-2 md:grid-cols-4 ">
@@ -32,6 +32,7 @@ const Education = () => {
           <p className="font-normal text-sm md:text-l ">Blockchain</p>
           <p className="font-normal text-sm md:text-l ">Network Security</p>
           <p className="font-normal text-sm md:text-l ">Distributed Systems</p>
+          <p className="font-normal text-sm md:text-l ">Deep Learning</p>
         </div>
       </div>
       <div className="mt-8 md:mt-16">
