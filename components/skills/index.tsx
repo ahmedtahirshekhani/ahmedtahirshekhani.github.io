@@ -12,36 +12,41 @@ const Skills = () => {
         <div className=" grid grid-cols-4 text-sm md:text-l ">
           <p className="font-normal">C</p>
           <p className="font-normal">C++</p>
-          <p className="font-normal">javaScript</p>
+          <p className="font-normal">JavaScript</p>
+          <p className="font-normal">TypeScript</p>
           <p className="font-normal">Haskell</p>
           <p className="font-normal">SQL</p>
           <p className="font-normal">Python</p>
           <p className="font-normal">Solidity</p>
-          <p className="font-normal">PHP</p>
-          <p className="font-normal">HTML</p>
-          <p className="font-normal">CSS</p>
         </div>
       </div>
       <div>
         <div className="flex gap-1 mt-10">
           <h1 className="font-bold text-sm md:text-xl text-secondaryText">Frameworks</h1>
         </div>
-        <div className=" grid grid-cols-4 text-sm md:text-l ">
-          <p className="font-normal">React</p>
-          <p className="font-normal">Express</p>
-          <p className="font-normal">Bootstrap</p>
-          <p className="font-normal">Next</p>
-          <p className="font-normal">Node</p>
+        <div className=" grid grid-cols-3 md:grid-cols-4 text-sm md:text-l ">
+          <p className="font-normal">React JS</p>
+          <p className="font-normal">Express JS</p>
+          <p className="font-normal">Angular JS</p>
+          <p className="font-normal">Next JS</p>
+          <p className="font-normal">Node JS</p>
           <p className="font-normal">Flask</p>
-          <p className="font-normal">Tailwind</p>
+          <p className="font-normal">MongoDB</p>
+          <p className="font-normal">Django</p>
         </div>
       </div>
       <div>
         <div className="flex gap-1 mt-10">
-          <h1 className="font-bold text-sm md:text-xl text-secondaryText">Tools</h1>
+          <h1 className="font-bold text-sm md:text-xl text-secondaryText">Developer Tools</h1>
         </div>
-        <div className=" grid  grid-cols-3 md:grid-cols-4 text-sm md:text-l">
+        <div className=" grid  grid-cols-4 md:grid-cols-4 text-sm md:text-l">
           <p className="font-normal">Git</p>
+          <p className="font-normal">Firebase</p>
+          <p className="font-normal">Miro</p>
+          <p className="font-normal">Trello</p>
+          <p className="font-normal">Draw.io</p>
+          <p className="font-normal">Canva</p>
+{/* 
           <p className="font-normal">AWS</p>
           <p className="font-normal">Postman</p>
           <p className="font-normal">Heroku</p>
@@ -50,13 +55,10 @@ const Skills = () => {
           <p className="font-normal">Jira</p>
           <p className="font-normal">Figma</p>
           <p className="font-normal">VS code</p>
-          <p className="font-normal">Trello</p>
-          <p className="font-normal">Draw.io</p>
-          <p className="font-normal">Canva</p>
-          <p className="font-normal">Google Collab</p>
+          <p className="font-normal">Google Collab</p> */}
         </div>
       </div>
-      <div>
+      {/* <div>
         <div className="flex gap-1 mt-10">
           <h1 className="font-bold text-sm md:text-xl text-secondaryText">Databases</h1>
         </div>
@@ -66,8 +68,8 @@ const Skills = () => {
           <p className="font-normal">PostgreSQL</p>
           <p className="font-normal">FireBase</p>
         </div>
-      </div>
-      <div>
+      </div> */}
+      {/* <div>
         <div className="flex gap-1 mt-10">
           <h1 className="font-bold text-sm md:text-xl text-secondaryText">Blockchain</h1>
         </div>
@@ -79,7 +81,7 @@ const Skills = () => {
           <p className="font-normal">solidity</p>
           <p className="font-normal">Metamask</p>
         </div>
-      </div>
+      </div> */}
       <div>
         <div className="flex gap-1 mt-10">
           <h1 className="font-bold text-sm md:text-xl text-secondaryText">
@@ -105,9 +107,8 @@ const Skills = () => {
           <p className="font-normal">Communication</p>
           <p className="font-normal">Teamwork</p>
           <p className="font-normal">Leadership</p>
-          <p className="font-normal">Problem-solving</p>
-          <p className="font-normal">Adaptability</p>
-          <p className="font-normal">Creativity</p>
+          <p className="font-normal">Conscientiousness</p>
+          <p className="font-normal">Passionate Learner</p>
         </div>
       </div>
     </div>
