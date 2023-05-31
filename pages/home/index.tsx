@@ -1,6 +1,5 @@
 import background from '../../assets/images/background/background.png';
 import Image from 'next/image';
-import ProjectCard from '../../components/projectcard/ProjectCard';
 import Head from 'next/head';
 import dispalyPic from '../../assets/images/project/project.png';
 import shekaniNew from '../../assets/images/shekani_new.jpg';
