@@ -9,6 +9,7 @@ import PrimaryFooter from '../../components/footer/primaryFooter';
 import Work from '../../components/workexperience';
 import Skills from '../../components/skills';
 import Extracurr from '../../components/extracurriculars/Extracurr';
+import ProfessionalDevelopment from '../../components/professionalDev';
 import ProjAbout from '../../components/projAbout/ProjAbout';
 
 const About = () => {
@@ -56,6 +57,7 @@ const About = () => {
       <div className="w-full h-[950px] md:h-[800px]"></div>
       <div className="md:mx-44">
         <Education></Education>
+        <ProfessionalDevelopment></ProfessionalDevelopment>
         <Work></Work>
         <ProjAbout></ProjAbout>
         <Skills></Skills>
