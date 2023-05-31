@@ -14,12 +14,15 @@ const IndividualProjects = () => {
   const [parsedData, setParsedData] = useState<any>();
   const router = useRouter();
   const { data }: any = router.query;
-  try {
-    setParsedData(JSON.parse(data));
-  } catch (e: any) {
-    // The line below run only if an error happened.
-    console.log('Message: ', e.message);
-  }
+
+  useEffect(()=>{
+
+    if (data !== undefined)
+    {
+      setParsedData(JSON.parse(data));
+    }
+  }, [parsedData, data])
+  
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showImage, setShowImage] = useState(true);
