@@ -13,7 +13,7 @@ const ProjectsDisplay = () => {
       <>
         <Head>
           <title>Ahmed Tahir Shekhani</title>
-          <link rel="shortcut icon" href="/icon.ico" />
+          <link rel="shortcut icon" href="/shekani_new.ico" />
         </Head>
       </>
       <PrimaryNavbar />
