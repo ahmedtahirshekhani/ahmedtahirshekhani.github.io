@@ -9,6 +9,7 @@ import PrimaryFooter from '../../components/footer/primaryFooter';
 import Work from '../../components/workexperience';
 import Skills from '../../components/skills';
 import Extracurr from '../../components/extracurriculars/Extracurr';
+import ProjAbout from '../../components/projAbout/ProjAbout';
 
 const About = () => {
   return (
@@ -56,7 +57,9 @@ const About = () => {
       <div className="md:mx-44">
         <Education></Education>
         <Work></Work>
+        <ProjAbout></ProjAbout>
         <Skills></Skills>
+        
         <Extracurr></Extracurr>
       </div>
       <PrimaryFooter></PrimaryFooter>
