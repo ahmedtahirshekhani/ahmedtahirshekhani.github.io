@@ -8,7 +8,7 @@ import Productsp from '../../assets/data/data';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-
+import Axios from 'axios'
 const HomePage = () => {
 
   const [dataFull, setDataFull] = useState<any>()
@@ -24,6 +24,16 @@ const HomePage = () => {
     const handleResize = () => {
     };
   }, []);
+
+
+  const tempData = async (params:any) => {
+    Axios
+    .get('http://localhost:5000/api/projects')
+    .then((res) => {
+      console.log(res.data);
+    });
+    
+  }
 
   const handleClick = (data: any) => {
     router.push({
@@ -50,16 +60,16 @@ const HomePage = () => {
           <div className="w-full flex flex-col gap-y- md:ml-56 mt-24 md:mt-56">
             <h1 className="text-3xl md:text-8xl  font-bold">Full Stack</h1>
             <h1 className="w-3/4 text-4xl md:text-9xl  font-bold">Developer</h1>
-            <Link className="" href={'/about'}>
+            {/* <Link className="" href={'/about'}> */}
               <button className="bg-linecolor text-secondaryText py-2 mt-5 md:mt-10 rounded-[7px] w-[150px] md:w-[330px] hover:bg-secondaryText hover:text-linecolor">
                 <div className="flex flex-row">
-                  <div className="w-96 text-xs md:text-lg font-semibold ml-4">
+                  <div className="w-96 text-xs md:text-lg font-semibold ml-4" onClick={tempData}>
                     Want to know more about me?
                   </div>
                   <i className="fa-sharp fa-solid fa-arrow-right text-[20px] mx-3 md:mx-4 mt-1"></i>
                 </div>
               </button>
-            </Link>
+            {/* </Link> */}
           </div>
           <div className="avatar md:pl-10 md:ml-3 pt-12 md:pt-48">
             <div className="rounded-full w-[100px] md:w-[430px] ">
