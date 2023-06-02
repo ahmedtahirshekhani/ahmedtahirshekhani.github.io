@@ -11,7 +11,7 @@ const PrimaryNavbar = () => {
           Ahmed Tahir Shekhani
         </Link>
       </div>
-      <div className="flex flex-row text-xs md:text-xl gap-x-3 md:gap-x-28 my-4 md:my-2">
+      <div className="flex flex-row text-xs md:ml-24 md:text-xl gap-x-3 md:gap-x-28 my-4 md:my-2">
         <div className='md:w-24'>
           <button>
             <Link

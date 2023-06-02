@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['shekhani-backend.appspot.com'],
+    domains: ['firebasestorage.googleapis.com'],
   },
 };
 
