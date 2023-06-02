@@ -12,30 +12,53 @@ import Axios from 'axios'
 const HomePage = () => {
 
   const [dataFull, setDataFull] = useState<any>()
+  const [dataFull2, setDataFull2] = useState<any>()
   const router = useRouter();
 
-  useEffect(() => {
-
-    if (window.innerWidth < 768) {
-      setDataFull(Productsp.slice(0, 2)) // Set the number of items to 1 for mobile screens
-    } else {
-      setDataFull(Productsp.slice(0, 3)) // Set the number of items to 3 for desktop screens
-    }
-    const handleResize = () => {
-    };
-  }, []);
-
-
-  const tempData = async (params:any) => {
-    Axios
-    .get('http://localhost:5000/api/projects')
-    .then((res) => {
-      console.log(res.data);
-    });
+  // useEffect(() => {
     
-  }
+  //   const tempData = async () => {
+  //     console.log("tempData")
+  //     Axios
+  //       .get('http://localhost:5000/api/projects')
+  //       .then((res) => {setDataFull2(res.data)})
+  //       .then(() => {
+
+  //         if (window.innerWidth < 768 && dataFull2 !== undefined) {
+  //           setDataFull(dataFull2.slice(0, 2)) // Set the number of items to 1 for mobile screens
+  //         } else if (dataFull2 !== undefined){
+  //           setDataFull(dataFull2.slice(0, 3)) // Set the number of items to 3 for desktop screens
+  //         }
+
+  //       })
+  //   }
+  //   tempData()
+  // },[dataFull2]);
+
+  useEffect(() => {
+    const tempData = async () => {
+      try {
+        const res = await Axios.get('http://localhost:5000/api/projects');
+        setDataFull2(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  
+    tempData();
+  }, []);
+  
+  useEffect(() => {
+    if (window.innerWidth < 768 && dataFull2 !== undefined) {
+      setDataFull(dataFull2.slice(0, 2)); // Set the number of items to 1 for mobile screens
+    } else if (dataFull2 !== undefined) {
+      setDataFull(dataFull2.slice(0, 3)); // Set the number of items to 3 for desktop screens
+    }
+  }, [dataFull2]);
+  
 
   const handleClick = (data: any) => {
+    console.log(data)
     router.push({
       pathname: '/individualprojects',
       query: { data: JSON.stringify(data) },
@@ -60,16 +83,16 @@ const HomePage = () => {
           <div className="w-full flex flex-col gap-y- md:ml-56 mt-24 md:mt-56">
             <h1 className="text-3xl md:text-8xl  font-bold">Full Stack</h1>
             <h1 className="w-3/4 text-4xl md:text-9xl  font-bold">Developer</h1>
-            {/* <Link className="" href={'/about'}> */}
-              <button className="bg-linecolor text-secondaryText py-2 mt-5 md:mt-10 rounded-[7px] w-[150px] md:w-[330px] hover:bg-secondaryText hover:text-linecolor">
-                <div className="flex flex-row">
-                  <div className="w-96 text-xs md:text-lg font-semibold ml-4" onClick={tempData}>
-                    Want to know more about me?
-                  </div>
-                  <i className="fa-sharp fa-solid fa-arrow-right text-[20px] mx-3 md:mx-4 mt-1"></i>
+            <Link className="" href={'/about'}>
+            <button className="bg-linecolor text-secondaryText py-2 mt-5 md:mt-10 rounded-[7px] w-[150px] md:w-[330px] hover:bg-secondaryText hover:text-linecolor">
+              <div className="flex flex-row">
+                <div className="w-96 text-xs md:text-lg font-semibold ml-4">
+                  Want to know more about me?
                 </div>
-              </button>
-            {/* </Link> */}
+                <i className="fa-sharp fa-solid fa-arrow-right text-[20px] mx-3 md:mx-4 mt-1"></i>
+              </div>
+            </button>
+            </Link>
           </div>
           <div className="avatar md:pl-10 md:ml-3 pt-12 md:pt-48">
             <div className="rounded-full w-[100px] md:w-[430px] ">
@@ -87,39 +110,41 @@ const HomePage = () => {
         <div className=" grid grid-cols-2 md:grid-cols-3 place-items-center  mt-3">
           {dataFull && dataFull.length > 0
             ? dataFull.map((data: any) => {
-                return (
-                  <div key={data.id}>
-                    <div className="md:w-[400px] md:h-[450px] w-[175px] h-[220px] ">
-                      <div className="border-2 bg-linecolor border-primaryBackground w-[170px] h-[210px] md:w-[340px] md:h-[405px] rounded-2xl md:rounded-3xl text-center shadow-[10px_10px_0_0_rgba(0,0,0,0.2)] md:shadow-[30px_30px_0_0_rgba(0,0,0,0.2)] md:hover:w-[350px] md:hover:h-[415px] ">
-                        <Image
-                          className="rounded-t-3xl border-b-2 border-primaryBackground"
-                          src={dispalyPic}
-                          alt="project display picture"
-                        />
-                        <h1 className="text-xl md:text-5xl text-secondaryText mt-2 md:mt-4 font-bold ">
-                          {data.heading}
-                        </h1>
-                        <p className="text-xs md:text-2xl h-11 md:h-20 text-primaryBackground text-left md:w-[430px] mx-1 md:mx-4 mt-1 md:mt-3">
-                          {data.description}
-                        </p>
-                        <div className="w-full md:mt-2 text-right ">
-                          <button
-                            className="bg-secondaryText text-linecolor py-1 md:py-2 mx-1 md:mx-3 rounded-[4px] md:rounded-[7px] hover:text-secondaryText hover:bg-linecolor hover:outline md:w-40"
-                            onClick={() => handleClick(data)}
-                          >
-                            <div className="flex flex-row ">
-                              <div className=" text-xs md:text-lg font-semibold ml-1 md:ml-4">
-                                Read More
-                              </div>
-                              <i className="fa-sharp fa-solid fa-arrow-right text-[10px] md:text-[20px] mx-1 md:ml-5  mt-1"></i>
+              return (
+                <div key={data.id}>
+                  <div className="md:w-[400px] md:h-[450px] w-[175px] h-[220px] ">
+                    <div className="border-2 bg-linecolor border-primaryBackground w-[170px] h-[210px] md:w-[340px] md:h-[405px] rounded-2xl md:rounded-3xl text-center shadow-[10px_10px_0_0_rgba(0,0,0,0.2)] md:shadow-[30px_30px_0_0_rgba(0,0,0,0.2)] md:hover:w-[350px] md:hover:h-[415px] ">
+                      <Image 
+                        className="rounded-t-3xl border-b-2 border-primaryBackground"
+                        src={dispalyPic}
+                        alt="project display picture"
+                        // width = "200"
+                        // height = "200"
+                      />
+                      <h1 className="text-xl md:text-5xl text-secondaryText mt-2 md:mt-4 font-bold ">
+                        {data.heading}
+                      </h1>
+                      <p className="text-xs md:text-2xl h-11 md:h-20 text-primaryBackground text-left md:w-[430px] mx-1 md:mx-4 mt-1 md:mt-3">
+                        {data.description}
+                      </p>
+                      <div className="w-full md:mt-2 text-right ">
+                        <button
+                          className="bg-secondaryText text-linecolor py-1 md:py-2 mx-1 md:mx-3 rounded-[4px] md:rounded-[7px] hover:text-secondaryText hover:bg-linecolor hover:outline md:w-40"
+                          onClick={() => handleClick(data)}
+                        >
+                          <div className="flex flex-row ">
+                            <div className=" text-xs md:text-lg font-semibold ml-1 md:ml-4">
+                              Read More
                             </div>
-                          </button>
-                        </div>
+                            <i className="fa-sharp fa-solid fa-arrow-right text-[10px] md:text-[20px] mx-1 md:ml-5  mt-1"></i>
+                          </div>
+                        </button>
                       </div>
                     </div>
                   </div>
-                );
-              })
+                </div>
+              );
+            })
             : ''}
         </div>
         <div className="w-full text-center mt-4 pb-12">

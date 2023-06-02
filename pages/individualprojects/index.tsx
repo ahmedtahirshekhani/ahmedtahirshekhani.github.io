@@ -20,6 +20,7 @@ const IndividualProjects = () => {
     if (data !== undefined)
     {
       setParsedData(JSON.parse(data));
+
     }
   }, [parsedData, data])
   
@@ -122,11 +123,11 @@ const IndividualProjects = () => {
             </div>
             <div>
               <h1 className="text-secondaryText text-2xl ">Technology Used</h1>
-              <p>MERN stack, MetaMask </p>
+              {parsedData ? <p>{parsedData.tech}.</p> : []}
             </div>
             <div>
               <h1 className="text-secondaryText text-2xl ">Duration</h1>
-              <p>Aug 2022- Dec 2022</p>
+              {parsedData ? <p>{parsedData.duration}.</p> : []}
             </div>
           </div>
         </div>
