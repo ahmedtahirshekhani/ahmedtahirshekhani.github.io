@@ -12,11 +12,12 @@ const ProjectsSlider = () => {
 
   useEffect(() => {
     const tempData = async () => {
-      Axios.get('http://localhost:5000/api/projects').then((res) => {
-        setDataFull2(res.data);
-      });
-    };
-    tempData();
+      Axios
+      .get('http://localhost:5000/api/projects')
+      .then((res) => {setDataFull2(res.data) 
+      console.log("The JSON Object needed is: ",res.data)})
+    }
+    tempData()
   }, []);
 
   useEffect(() => {
