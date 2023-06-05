@@ -21,7 +21,8 @@ const ProjectsSlider = () => {
     const tempData = async () => {
       Axios
       .get('http://localhost:5000/api/projects')
-      .then((res) => {setDataFull2(res.data) })
+      .then((res) => {setDataFull2(res.data) 
+      console.log("The JSON Object needed is: ",res.data)})
       //   .then(() => {setDataFull(dataFull2 !== undefined ? dataFull2.slice(start,end) : "")
       // }
       //   )
