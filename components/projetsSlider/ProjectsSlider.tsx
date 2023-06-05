@@ -1,69 +1,48 @@
 import { useState, useEffect } from 'react';
-import Productsp from '../../assets/data/data';
-import dispalyPic from '../../assets/images/project/project.png';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import Axios from 'axios'
+import Axios from 'axios';
 const ProjectsSlider = () => {
   let [start, setStart] = useState(0);
   let [end, setEnd] = useState(3);
-  // const [dataFull, setDataFull] = useState<any>()
-  const [dataFull2, setDataFull2] = useState<any>()
+  const [dataFull2, setDataFull2] = useState<any>();
 
-
-
-  // let dataFull: any = Productsp.slice(start, end);
   const router = useRouter();
-  let dataFull: any = []
-  
-  
+  let dataFull: any = [];
+
   useEffect(() => {
     const tempData = async () => {
       Axios
       .get('http://localhost:5000/api/projects')
       .then((res) => {setDataFull2(res.data) 
       console.log("The JSON Object needed is: ",res.data)})
-      //   .then(() => {setDataFull(dataFull2 !== undefined ? dataFull2.slice(start,end) : "")
-      // }
-      //   )
     }
     tempData()
-    
   }, []);
-  
+
   useEffect(() => {
     if (window.innerWidth < 768) {
-      setEnd(1)
-      if (dataFull2 !== undefined){
-        dataFull = dataFull2.slice(start, end);
-      }
+      setEnd(1);
     } else {
-      setEnd(3)
+      setEnd(3);
     }
+  }, []);
+
+  if (dataFull2 !== undefined) {
+    dataFull = dataFull2.slice(start, end);
   }
-  , [])
-  
-  
-if (dataFull2 !== undefined){
-  dataFull = dataFull2.slice(start, end);
-}
-
-
-  
 
   const increment = () => {
-    if (end < 5) {
+    if (end < dataFull2.length) {
       setStart(start + 1);
       setEnd(end + 1);
-      // setDataFull(dataFull2.slice(start+1,end+1))
     }
   };
-  
+
   const decrement = () => {
     if (start > 0) {
       setStart(start - 1);
       setEnd(end - 1);
-      // setDataFull(dataFull2.slice(start-1,end-1))
     }
   };
   const handleClick = (data: any) => {
@@ -74,7 +53,7 @@ if (dataFull2 !== undefined){
   };
 
   return (
-    <div className='font-montserrat'>
+    <div className="font-montserrat">
       <div className="flex flex-row">
         <button>
           <i
@@ -85,39 +64,41 @@ if (dataFull2 !== undefined){
 
         {dataFull && dataFull.length > 0
           ? dataFull.map((data: any) => {
-            return (
-              <div key={data.id}>
-                <div className="md:w-[400px] md:h-[450px] w-[315px] h-[395px] ">
-                  <div className="border-2 bg-linecolor border-primaryBackground w-[305px] h-[395px] md:w-[340px] md:h-[405px] rounded-2xl md:rounded-3xl text-center shadow-[5px_5px_0_0_rgba(0,0,0,0.2)] md:shadow-[30px_30px_0_0_rgba(0,0,0,0.2)] md:hover:w-[350px] md:hover:h-[415px]  ">
-                    <Image
-                      className="rounded-t-3xl border-b-2 border-primaryBackground"
-                      src={dispalyPic}
-                      alt="project display picture"
-                    />
-                    <h1 className="text-4xl md:text-5xl text-secondaryText mt-4 font-bold ">
-                      {data.heading}
-                    </h1>
-                    <p className="text-xl md:text-2xl h-24 md:h-20 text-primaryBackground text-left w-full md:w-[430px] px-2 md:mx-4 mt-3">
-                      {data.description}
-                    </p>
-                    <div className="w-full mt-2 text-right">
-                      <button
-                        className="bg-secondaryText text-linecolor py-2 mx-3 rounded-[7px] md-36 md:w-40 hover:text-secondaryText hover:bg-linecolor hover:outline"
-                        onClick={() => handleClick(data)}
-                      >
-                        <div className="flex flex-row">
-                          <div className="text-base md:text-lg font-semibold ml-2 md:ml-4">
-                            Read More
+              return (
+                <div key={data.id}>
+                  <div className="md:w-[400px] md:h-[450px] w-[315px] h-[395px] ">
+                    <div className="border-2 bg-linecolor border-primaryBackground w-[305px] h-[395px] md:w-[340px] md:h-[405px] rounded-2xl md:rounded-3xl text-center shadow-[5px_5px_0_0_rgba(0,0,0,0.2)] md:shadow-[30px_30px_0_0_rgba(0,0,0,0.2)] md:hover:w-[350px] md:hover:h-[415px]  ">
+                      <Image
+                        className="rounded-t-3xl border-b-2 border-primaryBackground"
+                        src={data.image[0]}
+                        alt="project display picture"
+                        width="340"
+                        height="405"
+                      />
+                      <h1 className="text-4xl md:text-5xl text-secondaryText mt-4 font-bold ">
+                        {data.heading}
+                      </h1>
+                      <p className="text-xl md:text-2xl h-24 md:h-20 text-primaryBackground text-left w-full md:w-[430px] px-2 md:mx-4 mt-3">
+                        {data.description}
+                      </p>
+                      <div className="w-full mt-2 text-right">
+                        <button
+                          className="bg-secondaryText text-linecolor py-2 mx-3 rounded-[7px] md-36 md:w-40 hover:text-secondaryText hover:bg-linecolor hover:outline"
+                          onClick={() => handleClick(data)}
+                        >
+                          <div className="flex flex-row">
+                            <div className="text-base md:text-lg font-semibold ml-2 md:ml-4">
+                              Read More
+                            </div>
+                            <i className="fa-sharp fa-solid fa-arrow-right text-[20px] mx-2 md:mx-0 md:ml-5 pt-0.5 md:mt-1"></i>
                           </div>
-                          <i className="fa-sharp fa-solid fa-arrow-right text-[20px] mx-2 md:mx-0 md:ml-5 pt-0.5 md:mt-1"></i>
-                        </div>
-                      </button>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })
+              );
+            })
           : ''}
 
         <button>

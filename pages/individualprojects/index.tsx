@@ -10,26 +10,25 @@ import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 
 const IndividualProjects = () => {
-  let images: any = [dispalyPic];
   const [parsedData, setParsedData] = useState<any>();
   const router = useRouter();
   const { data }: any = router.query;
 
-  useEffect(()=>{
-
-    if (data !== undefined)
-    {
+  useEffect(() => {
+    
+    if (data !== undefined) {
       setParsedData(JSON.parse(data));
-
     }
-  }, [parsedData, data])
-  
+  }, [data]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showImage, setShowImage] = useState(true);
 
   const increment = () => {
-    if (currentIndex < images.length) {
+    if (
+      parsedData !== undefined &&
+      currentIndex < parsedData.image.length - 1
+    ) {
       setCurrentIndex(currentIndex + 1);
     } else {
       setCurrentIndex(0);
@@ -46,13 +45,17 @@ const IndividualProjects = () => {
     const interval = setInterval(() => {
       setShowImage(false);
       setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setShowImage(true);
+        if (parsedData !== undefined) {
+          setCurrentIndex(
+            (prevIndex) => (prevIndex + 1) % parsedData.image.length
+          );
+          setShowImage(true);
+        }
       }, 500); // Transition duration in milliseconds
     }, 5000); // Transition delay in milliseconds
 
     return () => clearInterval(interval);
-  }, [images.length, showImage]);
+  }, [parsedData, showImage]);
 
   return (
     <div className="font-montserrat">
@@ -71,10 +74,10 @@ const IndividualProjects = () => {
         />
       </div>
 
-      <div className="absolute z-10 mt-40 md:ml-80 flex flex-row justify-center content-center mx-2">
+      <div className="absolute z-10 mt-40 md:ml-96 flex flex-row justify-center content-center mx-2">
         <button>
           <i
-            className="fa-solid fa-arrow-left text-linecolor text-[30px] mr-2 md:mr-10 md:ml-5 "
+            className="fa-solid fa-arrow-left text-linecolor text-[30px] mr-2 md:mr-10 md:ml-20 "
             onClick={decrement}
           ></i>
         </button>
@@ -88,11 +91,17 @@ const IndividualProjects = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Image
-              src={images[currentIndex]}
-              alt="Image"
-              className="rounded-t-xl border-b-2 border-primaryBackground md:w-[1000px] h-[350px] md:h-[590px] rounded-3xl"
-            />
+            {parsedData ? (
+              <Image
+                src={parsedData.image[currentIndex]}
+                alt="Image"
+                className="rounded-t-xl border-b-2 border-primaryBackground md:w-[1000px] h-[350px] md:h-[590px] rounded-3xl"
+                width="340"
+                height="405"
+              />
+            ) : (
+              []
+            )}
           </Transition>
         </div>
         <button>
