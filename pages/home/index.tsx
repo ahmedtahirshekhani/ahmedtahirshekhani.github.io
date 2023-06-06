@@ -17,7 +17,7 @@ const HomePage = () => {
   useEffect(() => {
     const tempData = async () => {
       try {
-        const res = await Axios.get('http://localhost:5000/api/projects');
+        const res = await Axios.get('https://shekhani-backend.web.app/api/projects');
         setDataFull2(res.data);
       } catch (error) {
         console.log(error);
