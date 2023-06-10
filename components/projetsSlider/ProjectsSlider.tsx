@@ -13,7 +13,7 @@ const ProjectsSlider = () => {
   useEffect(() => {
     const tempData = async () => {
       Axios
-      .get('https://shekhani-backend.web.app/api/projects')
+      .get('http://localhost:5000/api/projects')
       .then((res) => {setDataFull2(res.data) 
       console.log("The JSON Object needed is: ",res.data)})
     }

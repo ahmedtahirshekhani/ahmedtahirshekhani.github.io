@@ -13,12 +13,38 @@ const HomePage = () => {
   const [dataFull, setDataFull] = useState<any>();
   const [dataFull2, setDataFull2] = useState<any>();
   const router = useRouter();
+  const getProject = async () => {
+    // const response = await fetch(`http://localhost:5001/shekhani-backend/us-central1/api/v2/projects`);
+    const response = await Axios.get('http://localhost:5001/your-project-id/us-central1/api/v2/projects', {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST',
+        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      },
+    });
 
+    console.log("kabir here ohhh hellpop", response);
+    
+    // const project = await response.json();
+    // return project;
+  };
   useEffect(() => {
     const tempData = async () => {
       try {
-        const res = await Axios.get('https://shekhani-backend.web.app/api/projects');
-        setDataFull2(res.data);
+        // http://localhost:5001/shekhani-backend/us-central1/api
+        // const res = await Axios.get('http://localhost:5000/api/projects');
+        
+        getProject().then((project) => {
+          console.log("project",project);
+          
+          setDataFull2(project);
+        });
+
+
+        // const res = await Axios.get('');
+        // console.log("hahahah", res);
+        
+        // setDataFull2(res.data);
       } catch (error) {
         console.log(error);
       }
