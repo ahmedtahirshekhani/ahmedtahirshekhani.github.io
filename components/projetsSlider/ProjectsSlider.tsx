@@ -1,27 +1,39 @@
 import { useState, useEffect } from 'react';
-import Productsp from '../../assets/data/data';
-import dispalyPic from '../../assets/images/project/project.png';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-
+import Axios from 'axios';
 const ProjectsSlider = () => {
   let [start, setStart] = useState(0);
   let [end, setEnd] = useState(3);
-  let dataFull: any = Productsp.slice(start, end);
+  const [dataFull2, setDataFull2] = useState<any>();
+
   const router = useRouter();
+  let dataFull: any = [];
 
   useEffect(() => {
-    console.log('here');
+    const tempData = async () => {
+      Axios
+      .get('http://localhost:5000/api/projects')
+      .then((res) => {setDataFull2(res.data) 
+      console.log("The JSON Object needed is: ",res.data)})
+    }
+    tempData()
+  }, []);
 
+  useEffect(() => {
     if (window.innerWidth < 768) {
-      setEnd(1); // Set the number of items to 1 for mobile screens
+      setEnd(1);
     } else {
-      setEnd(3); // Set the number of items to 3 for desktop screens
+      setEnd(3);
     }
   }, []);
 
+  if (dataFull2 !== undefined) {
+    dataFull = dataFull2.slice(start, end);
+  }
+
   const increment = () => {
-    if (end < 5) {
+    if (end < dataFull2.length) {
       setStart(start + 1);
       setEnd(end + 1);
     }
@@ -41,7 +53,7 @@ const ProjectsSlider = () => {
   };
 
   return (
-    <div className='font-montserrat'>
+    <div className="font-montserrat">
       <div className="flex flex-row">
         <button>
           <i
@@ -58,14 +70,18 @@ const ProjectsSlider = () => {
                     <div className="border-2 bg-linecolor border-primaryBackground w-[305px] h-[395px] md:w-[340px] md:h-[405px] rounded-2xl md:rounded-3xl text-center shadow-[5px_5px_0_0_rgba(0,0,0,0.2)] md:shadow-[30px_30px_0_0_rgba(0,0,0,0.2)] md:hover:w-[350px] md:hover:h-[415px]  ">
                       <Image
                         className="rounded-t-3xl border-b-2 border-primaryBackground"
-                        src={dispalyPic}
+                        src={data.image[0]}
                         alt="project display picture"
+                        width="350"
+                        height="400"
+                        style={{ objectFit: 'fill' }}
                       />
-                      <h1 className="text-4xl md:text-5xl text-secondaryText mt-4 font-bold ">
+                      <h1 className="text-4xl md:text-xl h-14 text-secondaryText mt-4 font-bold ">
                         {data.heading}
                       </h1>
-                      <p className="text-xl md:text-2xl h-24 md:h-20 text-primaryBackground text-left w-full md:w-[430px] px-2 md:mx-4 mt-3">
-                        {data.description}
+                      <p className="text-xl md:text-base h-20 md:h-20 text-primaryBackground text-left w-full md:w-[320px] px-2 md:mx-2 ">
+                        {data.description.split(' ').slice(0, 18).join(' ')}
+                        {' ... '}
                       </p>
                       <div className="w-full mt-2 text-right">
                         <button

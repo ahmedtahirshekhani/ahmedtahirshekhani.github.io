@@ -8,27 +8,27 @@ import PrimaryNavbar from '../../components/navbar/primary';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
+import Link from 'next/link';
 
 const IndividualProjects = () => {
-  let images: any = [dispalyPic];
   const [parsedData, setParsedData] = useState<any>();
   const router = useRouter();
   const { data }: any = router.query;
 
-  useEffect(()=>{
-
-    if (data !== undefined)
-    {
+  useEffect(() => {
+    if (data !== undefined) {
       setParsedData(JSON.parse(data));
     }
-  }, [parsedData, data])
-  
+  }, [data]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showImage, setShowImage] = useState(true);
 
   const increment = () => {
-    if (currentIndex < images.length) {
+    if (
+      parsedData !== undefined &&
+      currentIndex < parsedData.image.length - 1
+    ) {
       setCurrentIndex(currentIndex + 1);
     } else {
       setCurrentIndex(0);
@@ -45,16 +45,20 @@ const IndividualProjects = () => {
     const interval = setInterval(() => {
       setShowImage(false);
       setTimeout(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setShowImage(true);
+        if (parsedData !== undefined) {
+          setCurrentIndex(
+            (prevIndex) => (prevIndex + 1) % parsedData.image.length
+          );
+          setShowImage(true);
+        }
       }, 500); // Transition duration in milliseconds
     }, 5000); // Transition delay in milliseconds
 
     return () => clearInterval(interval);
-  }, [images.length, showImage]);
+  }, [parsedData, showImage]);
 
   return (
-    <div className="font-montserrat">
+    <div className="font-montserrat text-linecolor">
       <>
         <Head>
           <title>Ahmed Tahir Shekhani</title>
@@ -64,16 +68,16 @@ const IndividualProjects = () => {
       <PrimaryNavbar />
       <div>
         <Image
-          className="w-screen absolute z-0 h-[600px] md:h-[800px] top-0 left-0"
+          className="w-full absolute z-0 h-[600px] md:h-[800px] top-0 left-0"
           src={background}
           alt=""
         />
       </div>
 
-      <div className="absolute z-10 mt-40 md:ml-80 flex flex-row justify-center content-center mx-2">
+      <div className="absolute z-10 mt-40 w-full flex flex-row justify-center content-center ">
         <button>
           <i
-            className="fa-solid fa-arrow-left text-linecolor text-[30px] mr-2 md:mr-10 md:ml-5 "
+            className="fa-solid fa-arrow-left text-linecolor text-[30px] mr-2 md:mr-10  "
             onClick={decrement}
           ></i>
         </button>
@@ -87,11 +91,17 @@ const IndividualProjects = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Image
-              src={images[currentIndex]}
-              alt="Image"
-              className="rounded-t-xl border-b-2 border-primaryBackground md:w-[1000px] h-[350px] md:h-[590px] rounded-3xl"
-            />
+            {parsedData ? (
+              <Image
+                src={parsedData.image[currentIndex]}
+                alt="Image"
+                className="rounded-t-xl border-b-2 border-primaryBackground md:w-[1000px] h-[350px] md:h-[590px] rounded-3xl"
+                width="340"
+                height="405"
+              />
+            ) : (
+              []
+            )}
           </Transition>
         </div>
         <button>
@@ -113,20 +123,28 @@ const IndividualProjects = () => {
             []
           )}
 
-          <p className=" text-lg">A crypto-currency gifting application.</p>
-
           <div className="flex flex-col mt-10 gap-y-10">
             <div>
               <h1 className="text-secondaryText text-2xl ">Description</h1>
               {parsedData ? <p>{parsedData.description}.</p> : []}
             </div>
             <div>
-              <h1 className="text-secondaryText text-2xl ">Technology Used</h1>
-              <p>MERN stack, MetaMask </p>
+              <h1 className="text-secondaryText text-2xl ">
+                Skills and deliverables
+              </h1>
+              {parsedData ? (
+                <div className=" grid grid-cols-4 text-sm md:text-l ">
+                  {parsedData.tech.map((item:any, index:any) => (
+                    <p key={index} className="font-normal">{item}</p>
+                  ))}
+                </div>
+              ) : (
+                []
+              )}
             </div>
             <div>
-              <h1 className="text-secondaryText text-2xl ">Duration</h1>
-              <p>Aug 2022- Dec 2022</p>
+              <h1 className="text-secondaryText text-2xl ">Link</h1>
+              {parsedData ? <Link href={parsedData.link}><p className='hover:text-secondaryText'>{parsedData.link}.</p></Link> : []}
             </div>
           </div>
         </div>

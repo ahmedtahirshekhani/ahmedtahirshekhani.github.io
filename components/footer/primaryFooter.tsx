@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const PrimaryFooter = () => {
   return (
-    <div className="font-montserrat">
+    <div className="font-montserrat text-linecolor">
       <footer className="w-full relative bottom-0 bg-footercolor text-center">
         <div className="my-3 md:my-5">
           <h1 className="font-bold text-2xl md:text-3xl pt-3 md:pt-7">CONTACT ME</h1>

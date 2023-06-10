@@ -9,7 +9,7 @@ import ProjectsSlider from '../../components/projetsSlider/ProjectsSlider';
 
 const ProjectsDisplay = () => {
   return (
-    <div className="bg-primaryBackground font-montserrat">
+    <div className="bg-primaryBackground font-montserrat text-linecolor">
       <>
         <Head>
           <title>Ahmed Tahir Shekhani</title>
@@ -19,7 +19,7 @@ const ProjectsDisplay = () => {
       <PrimaryNavbar />
       <div>
         <Image
-          className="w-screen absolute z-0 h-[800px] top-0 left-0"
+          className="w-full absolute z-0 h-[800px] top-0 left-0"
           src={background}
           alt=""
         />
@@ -28,7 +28,7 @@ const ProjectsDisplay = () => {
         <ProjectsSlider></ProjectsSlider>
       </div>
     
-      <div className='w-screen h-[800px] top-0 left-0'>
+      <div className='w-full h-[800px] top-0 left-0'>
       </div>
 
         <PrimaryFooter></PrimaryFooter> 
