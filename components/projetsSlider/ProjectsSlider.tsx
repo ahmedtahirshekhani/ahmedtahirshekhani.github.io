@@ -13,7 +13,7 @@ const ProjectsSlider = () => {
   useEffect(() => {
     const tempData = async () => {
       Axios
-      .get('https://shekhani-backend.web.app/api/projects')
+      .get('http://localhost:5000/api/projects')
       .then((res) => {setDataFull2(res.data) 
       console.log("The JSON Object needed is: ",res.data)})
     }
@@ -72,14 +72,16 @@ const ProjectsSlider = () => {
                         className="rounded-t-3xl border-b-2 border-primaryBackground"
                         src={data.image[0]}
                         alt="project display picture"
-                        width="340"
-                        height="405"
+                        width="350"
+                        height="400"
+                        style={{ objectFit: 'fill' }}
                       />
-                      <h1 className="text-4xl md:text-5xl text-secondaryText mt-4 font-bold ">
+                      <h1 className="text-4xl md:text-xl h-14 text-secondaryText mt-4 font-bold ">
                         {data.heading}
                       </h1>
-                      <p className="text-xl md:text-2xl h-24 md:h-20 text-primaryBackground text-left w-full md:w-[430px] px-2 md:mx-4 mt-3">
-                        {data.description}
+                      <p className="text-xl md:text-base h-20 md:h-20 text-primaryBackground text-left w-full md:w-[320px] px-2 md:mx-2 ">
+                        {data.description.split(' ').slice(0, 18).join(' ')}
+                        {' ... '}
                       </p>
                       <div className="w-full mt-2 text-right">
                         <button

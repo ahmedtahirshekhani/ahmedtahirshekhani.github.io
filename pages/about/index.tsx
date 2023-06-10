@@ -14,7 +14,7 @@ import ProjAbout from '../../components/projAbout/ProjAbout';
 
 const About = () => {
   return (
-    <div className="bg-primaryBackground font-montserrat">
+    <div className="bg-primaryBackground font-montserrat text-linecolor">
       <>
         <Head>
           <title>Ahmed Tahir Shekhani</title>
@@ -35,7 +35,8 @@ const About = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-y-10 w-96 md:w-1/2 pt-12 px-8 text-center md:text-left text-lg">
+          <div className="flex flex-col gap-y-10 w-96 md:w-1/2  px-8 text-center md:text-left text-lg">
+            <h1 className='text-5xl font-bold '>Ahmed Tahir Shekhani</h1>
             <p>
               A passionate and experienced FULL-STACK DEVELOPER and a DIGITAL
               MARKETING CONSULTANT who can solve your technical problem in the

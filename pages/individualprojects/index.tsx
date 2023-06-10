@@ -8,6 +8,7 @@ import PrimaryNavbar from '../../components/navbar/primary';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
+import Link from 'next/link';
 
 const IndividualProjects = () => {
   const [parsedData, setParsedData] = useState<any>();
@@ -15,7 +16,6 @@ const IndividualProjects = () => {
   const { data }: any = router.query;
 
   useEffect(() => {
-    
     if (data !== undefined) {
       setParsedData(JSON.parse(data));
     }
@@ -58,7 +58,7 @@ const IndividualProjects = () => {
   }, [parsedData, showImage]);
 
   return (
-    <div className="font-montserrat">
+    <div className="font-montserrat text-linecolor">
       <>
         <Head>
           <title>Ahmed Tahir Shekhani</title>
@@ -68,16 +68,16 @@ const IndividualProjects = () => {
       <PrimaryNavbar />
       <div>
         <Image
-          className="w-screen absolute z-0 h-[600px] md:h-[800px] top-0 left-0"
+          className="w-full absolute z-0 h-[600px] md:h-[800px] top-0 left-0"
           src={background}
           alt=""
         />
       </div>
 
-      <div className="absolute z-10 mt-40 md:ml-96 flex flex-row justify-center content-center mx-2">
+      <div className="absolute z-10 mt-40 w-full flex flex-row justify-center content-center ">
         <button>
           <i
-            className="fa-solid fa-arrow-left text-linecolor text-[30px] mr-2 md:mr-10 md:ml-20 "
+            className="fa-solid fa-arrow-left text-linecolor text-[30px] mr-2 md:mr-10  "
             onClick={decrement}
           ></i>
         </button>
@@ -123,20 +123,28 @@ const IndividualProjects = () => {
             []
           )}
 
-          <p className=" text-lg">A crypto-currency gifting application.</p>
-
           <div className="flex flex-col mt-10 gap-y-10">
             <div>
               <h1 className="text-secondaryText text-2xl ">Description</h1>
               {parsedData ? <p>{parsedData.description}.</p> : []}
             </div>
             <div>
-              <h1 className="text-secondaryText text-2xl ">Technology Used</h1>
-              {parsedData ? <p>{parsedData.tech}.</p> : []}
+              <h1 className="text-secondaryText text-2xl ">
+                Skills and deliverables
+              </h1>
+              {parsedData ? (
+                <div className=" grid grid-cols-4 text-sm md:text-l ">
+                  {parsedData.tech.map((item:any, index:any) => (
+                    <p key={index} className="font-normal">{item}</p>
+                  ))}
+                </div>
+              ) : (
+                []
+              )}
             </div>
             <div>
-              <h1 className="text-secondaryText text-2xl ">Duration</h1>
-              {parsedData ? <p>{parsedData.duration}.</p> : []}
+              <h1 className="text-secondaryText text-2xl ">Link</h1>
+              {parsedData ? <Link href={parsedData.link}><p className='hover:text-secondaryText'>{parsedData.link}.</p></Link> : []}
             </div>
           </div>
         </div>

@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['firebasestorage.googleapis.com'],
-  },
+    domains: ['drive.google.com']
+  }
 };
 
 module.exports = nextConfig;
