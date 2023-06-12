@@ -13,9 +13,11 @@ const ProjectsSlider = () => {
   useEffect(() => {
     const tempData = async () => {
       Axios
-      .get('http://localhost:5000/api/projects')
-      .then((res) => {setDataFull2(res.data) 
-      console.log("The JSON Object needed is: ",res.data)})
+        .get('http://localhost:5000/api/projects')
+        .then((res) => {
+          setDataFull2(res.data)
+          console.log("The JSON Object needed is: ", res.data)
+        })
     }
     tempData()
   }, []);
@@ -62,7 +64,7 @@ const ProjectsSlider = () => {
           ></i>
         </button>
 
-        {dataFull && dataFull.length > 0
+        {/* {dataFull && dataFull.length > 0
           ? dataFull.map((data: any) => {
               return (
                 <div key={data.id}>
@@ -101,7 +103,48 @@ const ProjectsSlider = () => {
                 </div>
               );
             })
+          : ''} */}
+        {dataFull && dataFull.length > 0
+          ? dataFull.map((data: any) => {
+            return (
+              <div key={data.id}>
+                <div className="md:w-[400px] md:h-[450px] w-[315px] h-[395px] ">
+                  <div className="border-2 bg-linecolor border-primaryBackground w-[305px] h-[395px] md:w-[340px] md:h-[405px] rounded-2xl md:rounded-3xl text-center shadow-[5px_5px_0_0_rgba(0,0,0,0.2)] md:shadow-[30px_30px_0_0_rgba(0,0,0,0.2)] md:hover:w-[350px] md:hover:h-[415px]  ">
+                    <Image
+                      className="rounded-t-2xl md:rounded-t-3xl border-b-2 border-primaryBackground"
+                      src={data.image[0]}
+                      alt="project display picture"
+                      width="350"
+                      height="400"
+                      style={{ objectFit: 'cover', width: '100%', height: '47%' }}
+                    />
+                    <h1 className="text-xl md:text-xl h-14 text-secondaryText mt-4 font-bold ">
+                      {data.heading}
+                    </h1>
+                    <p className=" ml-2 mr-2 md:text-base h-20 md:h-20 text-primaryBackground text-left w-full md:w-[320px] px-2 md:mx-2 ">
+                      {data.description.split(' ').slice(0, 18).join(' ')}
+                      {' ... '}
+                    </p>
+                    <div className="w-full mt-2 text-right">
+                      <button
+                        className="bg-secondaryText text-linecolor py-2 mx-3 rounded-[7px] md-36 md:w-40 hover:text-secondaryText hover:bg-linecolor hover:outline"
+                        onClick={() => handleClick(data)}
+                      >
+                        <div className="flex flex-row">
+                          <div className="text-base md:text-lg font-semibold ml-2 md:ml-4">
+                            Read More
+                          </div>
+                          <i className="fa-sharp fa-solid fa-arrow-right text-[20px] mx-2 md:mx-0 md:ml-5 pt-0.5 md:mt-1"></i>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })
           : ''}
+
 
         <button>
           <i
