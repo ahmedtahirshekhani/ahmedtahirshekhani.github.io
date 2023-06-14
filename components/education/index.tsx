@@ -8,9 +8,9 @@ const Education = () => {
           <h1 className="font-bold text-sm md:text-2xl">BS Computer Science</h1>
         </div>
         <div className="text-secondaryText">
-          <h1 className="font-bold text-sm md:text-l">
-            Lahore University of Management Sciences
-          </h1>
+          <div className=" w-80 h-6 items-center font-bold text-sm md:text-l flex justify-center rounded-lg text-primaryBackground bg-linecolor outline">
+           Lahore University of Management Sciences
+          </div>
           <h1 className="font-bold text-sm md:text-l ">Sep 2019 - June 2023</h1>
           <h1 className="font-bold text-sm md:text-l">cGPA - 3.77</h1>
         </div>
@@ -40,9 +40,9 @@ const Education = () => {
           <h1 className="font-bold text-sm md:text-2xl">Cambridge A Levels</h1>
         </div>
         <div className="text-secondaryText">
-        <h1 className="font-bold text-sm md:text-l">
-            Beacon House College Campus North
-          </h1>
+          <div className=" w-72 h-6 items-center font-bold text-sm md:text-l flex justify-center rounded-lg text-primaryBackground bg-linecolor outline">
+          Beacon House College Campus North
+          </div>
           <h1 className="font-bold text-sm md:text-l ">Grade - 4 A’s</h1>
         </div>
         <div className=" gap-1 my-2">
