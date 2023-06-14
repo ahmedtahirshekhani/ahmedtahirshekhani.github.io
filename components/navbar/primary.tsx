@@ -9,8 +9,8 @@ const PrimaryNavbar = () => {
   };
 
   return (
-    <div className="flex flex-row md:gap-x-96 md:m-6 absolute z-20 font-montserrat text-linecolor w-full">
-      <div className="w-1/2 md:w-44 m-3">
+    <div className="flex flex-row md:my-6 absolute z-20 font-montserrat text-linecolor w-full">
+      <div className="w-1/2 md:w-1/4 m-3">
         <Link
           className="text-base md:text-4xl font-montserrat font-light"
           href={'/'}
@@ -18,54 +18,56 @@ const PrimaryNavbar = () => {
           Mr. Shekhani
         </Link>
       </div>
-      <div className="hidden md:flex flex-row text-xs md:text-xl gap-x-3 md:gap-x-28 my-4 md:my-2">
-        <div className="items-center flex">
-          <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
-            <Link
-              className="normal-case font-montserrat font-normal "
-              href={'/'}
-            >
-              Home
-            </Link>
+      <div className='w-3/4 flex justify-end'>
+        <div className="hidden md:flex flex-row text-xs md:text-xl gap-x-3 md:gap-x-28 my-4 md:my-2 mr-10 ">
+          <div className="items-center flex">
+            <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
+              <Link
+                className="normal-case font-montserrat font-normal "
+                href={'/'}
+              >
+                Home
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="items-center flex">
-          <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
-            <Link
-              className="font-normal "
-              href={'/about'}
-            >
-              About me
-            </Link>
+          <div className="items-center flex">
+            <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
+              <Link
+                className="font-normal "
+                href={'/about'}
+              >
+                About me
+              </Link>
+            </div>
           </div>
-        </div>
-        <div className="items-center flex">
-          <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
-            <Link
-              className="normal-case font-montserrat font-normal "
-              href={'/projectsDisplay'}
-            >
-              Projects
-            </Link>
+          <div className="items-center flex">
+            <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
+              <Link
+                className="normal-case font-montserrat font-normal "
+                href={'/projectsDisplay'}
+              >
+                Projects
+              </Link>
+            </div>
           </div>
-        </div>
 
-        <div className="items-center flex">
-          <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
-            <button
-              className="m-0 p-0 normal-case font-montserrat font-normal "
-              onClick={() => {
-                window.scrollTo({
-                  top: Math.max(
-                    document.body.scrollHeight,
-                    document.documentElement.scrollHeight
-                  ),
-                  behavior: 'smooth',
-                });
-              }}
-            >
-              Contact
-            </button>
+          <div className="items-center flex">
+            <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
+              <button
+                className="m-0 p-0 normal-case font-montserrat font-normal "
+                onClick={() => {
+                  window.scrollTo({
+                    top: Math.max(
+                      document.body.scrollHeight,
+                      document.documentElement.scrollHeight
+                    ),
+                    behavior: 'smooth',
+                  });
+                }}
+              >
+                Contact
+              </button>
+            </div>
           </div>
         </div>
       </div>
