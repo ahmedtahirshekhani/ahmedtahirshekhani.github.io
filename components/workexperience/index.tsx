@@ -2,14 +2,15 @@ const Work = () => {
   return (
 
     <div className="m-10 font-montserrat">
-      <h1 className="text-3xl font-bold text-white">Work Experience</h1>
+      <h1 className="text-4xl font-bold text-white">Work Experience</h1>
       <div className="w-full h-0.5 bg-linecolor"></div>
       <div>
         <div className="flex gap-5 md:gap-1 mt-10">
-          <h1 className="font-bold text-sm md:text-xl">Lab/Software Developer (Part Time) </h1>
-          <h1 className="font-light text-sm md:text-xl">- Al Nafi</h1>
+          <h1 className="font-bold text-sm md:text-2xl">Lab/Software Developer (Part Time) </h1>
+          
         </div>
         <div className="text-secondaryText">
+        <h1 className="font-bold text-sm md:text-l">Al Nafi</h1>
           <h1 className="font-bold text-sm md:text-l ">Jun 2022 - Aug 2022</h1>
         </div>
         <div className="mt-8">
@@ -38,10 +39,10 @@ const Work = () => {
       </div>
       <div>
         <div className="flex gap-5 md:gap-1 mt-10">
-          <h1 className="font-bold text-sm md:text-xl">Software Engineer Intern </h1>
-          <h1 className="font-light text-sm md:text-xl">- 10 Pearls</h1>
+          <h1 className="font-bold text-sm md:text-2xl">Software Engineer Intern </h1>
         </div>
         <div className="text-secondaryText">
+          <h1 className="font-bold text-sm md:text-l"> 10 Pearls</h1>
           <h1 className="font-bold text-sm md:text-l ">Jun 2022 - Aug 2022</h1>
         </div>
         <div className="mt-8">
@@ -66,10 +67,10 @@ const Work = () => {
       </div>
       <div>
         <div className="flex gap-1 md:gap-1 mt-8 md:mt-16">
-          <h1 className="font-bold text-sm md:text-xl">Web Developer & UI/UX Intern</h1>
-          <h1 className="font-light text-sm md:text-xl">- Enzyme Digital</h1>
+          <h1 className="font-bold text-sm md:text-2xl">Web Developer & UI/UX Intern</h1>
         </div>
         <div className="text-secondaryText">
+          <h1 className="font-bold text-sm md:text-l">Enzyme Digital</h1>
           <h1 className="font-bold text-sm md:text-l ">Jun 2021 - Aug 2021</h1>
         </div>
         <div className="mt-8">

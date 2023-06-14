@@ -1,14 +1,14 @@
 const ProjAbout = () => {
   return (
     <div className="m-10 font-montserrat">
-      <h1 className="text-3xl font-bold text-white">Projects</h1>
+      <h1 className="text-4xl font-bold text-white">Projects</h1>
       <div className="w-full h-0.5 bg-linecolor"></div>
       <div>
         <div className="flex gap-5 md:gap-1 mt-5 md:mt-10">
-          <h1 className="font-bold text-sm md:text-xl">
+          <h1 className="font-bold text-sm md:text-2xl">
             Autonomous Trading Bot
           </h1>
-          <h1 className="font-light text-sm md:text-xl">- FYP</h1>
+          <h1 className="font-light text-sm md:text-2xl">- FYP</h1>
         </div>
         <div className="text-secondaryText">
           <h1 className="font-bold text-sm md:text-l ">Aug 2022 - present</h1>
@@ -36,8 +36,8 @@ const ProjAbout = () => {
 
       <div>
         <div className="flex gap-5 md:gap-1 mt-5 md:mt-10">
-          <h1 className="font-bold text-sm md:text-xl">UWaterloo</h1>
-          <h1 className="font-light text-sm md:text-xl">
+          <h1 className="font-bold text-sm md:text-2xl">UWaterloo</h1>
+          <h1 className="font-light text-sm md:text-2xl">
             - Folder Management DnD{' '}
           </h1>
         </div>

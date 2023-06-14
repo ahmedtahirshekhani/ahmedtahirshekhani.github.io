@@ -8,7 +8,7 @@ const PrimaryFooter = () => {
         <div className="my-3 md:my-5">
           <h1 className="font-bold text-2xl md:text-3xl pt-3 md:pt-7">CONTACT ME</h1>
         </div>
-        <div className="flex text-xs font-bold md:text-2xl  md:mx-3 justify-center md:mx-96">
+        <div className="flex text-xs font-bold md:text-2xl justify-center ">
           <div className="flex flex-row gap-2 md:gap-5 my-2  md:mr-24">
             <i className="fa-solid fa-phone text-white text-[15px] md:text-[28px] md:ml-5 md:mt-1"></i>
             <a

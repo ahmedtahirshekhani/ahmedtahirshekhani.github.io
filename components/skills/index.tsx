@@ -1,11 +1,11 @@
 const Skills = () => {
   return (
     <div className="m-10 font-montserrat">
-      <h1 className="text-3xl font-bold text-white">Skills</h1>
+      <h1 className="text-4xl font-bold text-white">Skills</h1>
       <div className="w-full h-0.5 bg-linecolor"></div>
       <div>
         <div className="flex gap-1 mt-10">
-          <h1 className="font-bold text-sm md:text-xl text-secondaryText">
+          <h1 className="font-bold text-sm md:text-2xl text-secondaryText">
             Languages
           </h1>
         </div>
@@ -22,7 +22,7 @@ const Skills = () => {
       </div>
       <div>
         <div className="flex gap-1 mt-10">
-          <h1 className="font-bold text-sm md:text-xl text-secondaryText">Frameworks</h1>
+          <h1 className="font-bold text-sm md:text-2xl text-secondaryText">Frameworks</h1>
         </div>
         <div className=" grid grid-cols-3 md:grid-cols-4 text-sm md:text-l ">
           <p className="font-normal">React JS</p>
@@ -37,7 +37,7 @@ const Skills = () => {
       </div>
       <div>
         <div className="flex gap-1 mt-10">
-          <h1 className="font-bold text-sm md:text-xl text-secondaryText">Developer Tools</h1>
+          <h1 className="font-bold text-sm md:text-2xl text-secondaryText">Developer Tools</h1>
         </div>
         <div className=" grid  grid-cols-4 md:grid-cols-4 text-sm md:text-l">
           <p className="font-normal">Git</p>
@@ -46,45 +46,12 @@ const Skills = () => {
           <p className="font-normal">Trello</p>
           <p className="font-normal">Draw.io</p>
           <p className="font-normal">Canva</p>
-{/* 
-          <p className="font-normal">AWS</p>
-          <p className="font-normal">Postman</p>
-          <p className="font-normal">Heroku</p>
-          <p className="font-normal">Docker</p>
-          <p className="font-normal">GCP</p>
-          <p className="font-normal">Jira</p>
-          <p className="font-normal">Figma</p>
-          <p className="font-normal">VS code</p>
-          <p className="font-normal">Google Collab</p> */}
+
         </div>
       </div>
-      {/* <div>
-        <div className="flex gap-1 mt-10">
-          <h1 className="font-bold text-sm md:text-xl text-secondaryText">Databases</h1>
-        </div>
-        <div className=" grid grid-cols-2 md:grid-cols-4 text-sm md:text-l">
-          <p className="font-normal">MongoDB</p>
-          <p className="font-normal">mySQL</p>
-          <p className="font-normal">PostgreSQL</p>
-          <p className="font-normal">FireBase</p>
-        </div>
-      </div> */}
-      {/* <div>
-        <div className="flex gap-1 mt-10">
-          <h1 className="font-bold text-sm md:text-xl text-secondaryText">Blockchain</h1>
-        </div>
-        <div className=" grid grid-cols-3 md:grid-cols-4 text-sm md:text-l ">
-          <p className="font-normal">Ethereum</p>
-          <p className="font-normal">Truffle</p>
-          <p className="font-normal">Ganache</p>
-          <p className="font-normal">Remix</p>
-          <p className="font-normal">solidity</p>
-          <p className="font-normal">Metamask</p>
-        </div>
-      </div> */}
       <div>
         <div className="flex gap-1 mt-10">
-          <h1 className="font-bold text-sm md:text-xl text-secondaryText">
+          <h1 className="font-bold text-sm md:text-2xl text-secondaryText">
             Digital Marketing
           </h1>
         </div>
@@ -99,7 +66,7 @@ const Skills = () => {
       </div>
       <div>
         <div className="flex gap-1 mt-10">
-          <h1 className="font-bold text-sm md:text-xl text-secondaryText">
+          <h1 className="font-bold text-sm md:text-2xl text-secondaryText">
             Interpersonal Skills
           </h1>
         </div>

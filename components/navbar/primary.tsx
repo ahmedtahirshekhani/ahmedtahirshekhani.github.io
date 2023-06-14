@@ -18,57 +18,49 @@ const PrimaryNavbar = () => {
           Mr. Shekhani
         </Link>
       </div>
-      <div className='w-3/4 flex justify-end'>
-        <div className="hidden md:flex flex-row text-xs md:text-xl gap-x-3 md:gap-x-28 my-4 md:my-2 mr-10 ">
-          <div className="items-center flex">
-            <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
-              <Link
-                className="normal-case font-montserrat font-normal "
-                href={'/'}
-              >
+      <div className="w-3/4 flex justify-end">
+        <div className="hidden md:flex flex-row text-xs md:text-xl gap-x-3  lg:gap-x-28 my-4 md:my-2 mr-5 lg:mr-10 ">
+          <Link className="normal-case font-montserrat font-normal items-center flex " href={'/'}>
+            
+              <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
                 Home
-              </Link>
-            </div>
-          </div>
-          <div className="items-center flex">
-            <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
-              <Link
-                className="font-normal "
-                href={'/about'}
-              >
+              </div>
+            
+          </Link>
+          <Link className="font-normal items-center flex " href={'/about'}>
+              <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
                 About me
-              </Link>
-            </div>
-          </div>
-          <div className="items-center flex">
-            <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
-              <Link
-                className="normal-case font-montserrat font-normal "
-                href={'/projectsDisplay'}
-              >
+              </div>
+          </Link>
+          <Link
+            className="normal-case font-montserrat font-normal items-center flex"
+            href={'/projectsDisplay'}
+          >
+            
+              <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
                 Projects
-              </Link>
-            </div>
-          </div>
+              </div>
+            
+          </Link>
 
-          <div className="items-center flex">
-            <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
-              <button
-                className="m-0 p-0 normal-case font-montserrat font-normal "
-                onClick={() => {
-                  window.scrollTo({
-                    top: Math.max(
-                      document.body.scrollHeight,
-                      document.documentElement.scrollHeight
-                    ),
-                    behavior: 'smooth',
-                  });
-                }}
-              >
+          <button
+            className="m-0 p-0 normal-case font-montserrat font-normal "
+            onClick={() => {
+              window.scrollTo({
+                top: Math.max(
+                  document.body.scrollHeight,
+                  document.documentElement.scrollHeight
+                ),
+                behavior: 'smooth',
+              });
+            }}
+          >
+            <div className="items-center flex">
+              <div className="w-32 h-10 items-center bg-secondaryText flex justify-center rounded-xl hover:text-secondaryText hover:bg-linecolor hover:outline">
                 Contact
-              </button>
+              </div>
             </div>
-          </div>
+          </button>
         </div>
       </div>
       {isMenuOpen ? (
@@ -81,23 +73,24 @@ const PrimaryNavbar = () => {
             </div>
           </div>
         </div>
-
       )}
 
-      {/* <div className="md:hidden w-1/2">
-        <div onClick={toggleMenu}> */}
       {!isMenuOpen ? (
         []
       ) : (
-        <div className='w-full flex justify-end'>
+        <div className="w-full flex justify-end">
           <div className="flex flex-col mt-5 mr-3 drop-shadow-2xl bg-secondaryText text-linecolor normal-case w-44 font-montserrat absolute z-30 rounded-[10px]">
             <div className="mt-3 flex w-full justify-end ">
-              <div className="fa-sharp fa-solid fa-times text-[24px] mr-4" onClick={toggleMenu}></div>
+              <div
+                className="fa-sharp fa-solid fa-times text-[24px] mr-4"
+                onClick={toggleMenu}
+              ></div>
             </div>
 
             <div
-              className={`flex flex-col ml-5 gap-y-9 md:flex-row text-xl md:text-xl gap-x-3 md:gap-x-28 my-4 md:my-2 ${isMenuOpen ? '' : 'hidden'
-                }`}
+              className={`flex flex-col ml-5 gap-y-9 md:flex-row text-xl md:text-xl gap-x-3 md:gap-x-28 my-4 md:my-2 ${
+                isMenuOpen ? '' : 'hidden'
+              }`}
             >
               <div className="flex flex-row gap-x-3">
                 <div>
@@ -175,7 +168,6 @@ const PrimaryNavbar = () => {
       {/* </div>
 
       </div> */}
-
     </div>
   );
 };
