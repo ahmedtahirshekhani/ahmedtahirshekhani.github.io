@@ -28,14 +28,14 @@ const About = () => {
           src={background}
           alt=""
         />
-        <div className="md:flex absolute z-10 md:flex-row md:gap-x-20 pt-24 md:mt-48 md:ml-48 ">
-          <div className="avatar ml-[28%] md:pl-10 md:ml-3">
-            <div className="rounded-full w-44 md:w-96 h-96 ">
+        <div className="md:flex absolute z-10 md:flex-row md:gap-x-20 pt-24  md:mt-48 md:ml-48 ">
+          <div className="avatar flex w-screen md:w-auto justify-center md:pl-10 md:ml-3">
+            <div className="rounded-full w-52 h-52 md:w-96 md:h-96 ">
               <Image src={shekaniNew} alt="Ahmed Tahir Shekhani" />
             </div>
           </div>
 
-          <div className="flex flex-col gap-y-10 w-96 md:w-1/2  px-8 text-center md:text-left text-lg">
+          <div className="flex flex-col gap-y-10 w-96 md:w-1/2 py-10 md:py-0 px-8 text-center md:text-left text-lg">
             <h1 className='text-5xl font-bold '>Ahmed Tahir Shekhani</h1>
             <p>
               A passionate and experienced FULL-STACK DEVELOPER and a DIGITAL
@@ -55,7 +55,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-[950px] md:h-[800px]"></div>
+      <div className="w-full h-[1050px] md:h-[800px]"></div>
       <div className="md:mx-44">
         <Education></Education>
         <ProfessionalDevelopment></ProfessionalDevelopment>
