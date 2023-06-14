@@ -68,13 +68,13 @@ const IndividualProjects = () => {
       <PrimaryNavbar />
       <div>
         <Image
-          className="w-full absolute z-0 h-[600px] md:h-[800px] top-0 left-0"
+          className="w-full absolute z-0 h-[500px] md:h-[800px] top-0 left-0"
           src={background}
           alt=""
         />
       </div>
 
-      <div className="absolute z-10 mt-40 w-full flex flex-row justify-center content-center ">
+      <div className="absolute z-10 mt-40 w-full flex flex-row justify-center content-center px-2 md:px-0">
         <button>
           <i
             className="fa-solid fa-arrow-left text-linecolor text-[30px] mr-2 md:mr-10  "
@@ -95,7 +95,7 @@ const IndividualProjects = () => {
               <Image
                 src={parsedData.image[currentIndex]}
                 alt="Image"
-                className="rounded-t-xl border-b-2 border-primaryBackground md:w-[1000px] h-[350px] md:h-[590px] rounded-3xl"
+                className="rounded-t-xl border-b-2 border-primaryBackground md:w-[1000px] h-[280px] md:h-[590px] rounded-3xl"
                 width="340"
                 height="405"
               />
@@ -113,7 +113,7 @@ const IndividualProjects = () => {
       </div>
 
       <div className="bg-primaryBackground">
-        <div className="w-full h-[600px] md:h-[800px] bg-primaryBackground"></div>
+        <div className="w-full h-[500px] md:h-[800px] bg-primaryBackground"></div>
         <div className="mx-10 md:mx-44 pb-28">
           {parsedData ? (
             <h1 className="text-4xl md:text-6xl font-bold md:mt-20 text-secondaryText">

@@ -30,7 +30,7 @@ const About = () => {
         />
         <div className="md:flex absolute z-10 md:flex-row md:gap-x-20 pt-24 md:mt-48 md:ml-48 ">
           <div className="avatar ml-[28%] md:pl-10 md:ml-3">
-            <div className="rounded-full w-44 md:w-96 ">
+            <div className="rounded-full w-44 md:w-96 h-96 ">
               <Image src={shekaniNew} alt="Ahmed Tahir Shekhani" />
             </div>
           </div>
