@@ -17,6 +17,8 @@ const IndividualProjects = () => {
 
   useEffect(() => {
     if (data !== undefined) {
+      console.log("chal ley pleaseeee yaaarrr", data);
+      
       setParsedData(JSON.parse(data));
     }
   }, [data]);
@@ -60,7 +62,7 @@ const IndividualProjects = () => {
   return (
     <div className="font-montserrat text-linecolor">
       <>
-        <Head>
+        <Head>Axios
           <title>Ahmed Tahir Shekhani</title>
           <link rel="shortcut icon" href="/shekani_new.ico" />
         </Head>
@@ -144,7 +146,7 @@ const IndividualProjects = () => {
             </div>
             <div>
               <h1 className="text-secondaryText text-2xl ">Link</h1>
-              {parsedData ? <Link href={parsedData.link}><p className='hover:text-secondaryText'>{parsedData.link}.</p></Link> : []}
+              {parsedData && parsedData.link !== undefined ? <Link href={parsedData.link}><p className='hover:text-secondaryText'>{parsedData.link}.</p></Link> : "--"}
             </div>
           </div>
         </div>

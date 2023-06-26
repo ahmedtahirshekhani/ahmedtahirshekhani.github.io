@@ -18,7 +18,7 @@ const HomePage = () => {
   useEffect(() => {
     const tempData = async () => {
       try {
-        const res = await Axios.get('http://localhost:5000/api/projects');
+        const res = await Axios.get('https://personal-website-backend-sigma.vercel.app/api/projects');
         console.log(res.data);
 
         setDataFull2(res.data);
