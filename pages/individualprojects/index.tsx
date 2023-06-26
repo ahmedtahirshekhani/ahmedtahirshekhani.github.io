@@ -128,7 +128,7 @@ const IndividualProjects = () => {
           <div className="flex flex-col mt-10 gap-y-10">
             <div>
               <h1 className="text-secondaryText text-2xl ">Description</h1>
-              {parsedData ? <p>{parsedData.description}.</p> : []}
+              {parsedData ? <p>{parsedData.description}</p> : []}
             </div>
             <div>
               <h1 className="text-secondaryText text-2xl ">
@@ -146,7 +146,7 @@ const IndividualProjects = () => {
             </div>
             <div>
               <h1 className="text-secondaryText text-2xl ">Link</h1>
-              {parsedData && parsedData.link !== undefined ? <Link href={parsedData.link}><p className='hover:text-secondaryText'>{parsedData.link}.</p></Link> : "--"}
+              {parsedData && parsedData.link !== undefined ? <Link href={parsedData.link}><p className='hover:text-secondaryText'>{parsedData.link}</p></Link> : "--"}
             </div>
           </div>
         </div>
