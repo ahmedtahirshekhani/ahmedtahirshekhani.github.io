@@ -224,8 +224,10 @@
 }
 .video-container{
   position:relative;
-  padding-bottom:56.25%;
-  padding-top:30px;
+  padding-bottom: 35%;
+  padding-top:20px;
+  justify-content: center;
+  align-items: center;
   height:0;
   overflow:hidden;
 }
@@ -235,5 +237,5 @@
   left:0;
   justify-content: center;
   width:70%;
-  height:60%;
+  height:100%;
 }
