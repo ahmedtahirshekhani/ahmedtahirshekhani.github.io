@@ -184,11 +184,11 @@ const team = [
     status:"The Mobile Maven",
    
   },
-  {
-    team:" As our senior SAP resource, Faizan Lodhi brings a wealth of expertise with 4+ years of experience in SAP ABAP development and deep knowledge of SAP 4 HANA. His prowess in SAP solutions is unmatched, making him a key asset for any enterprise's SAP needs",
-    name: " Faizan Lodhi",
-    status:"The SAP Sage",
-  },
+  //{
+   // team:" As our senior SAP resource, Faizan Lodhi brings a wealth of expertise with 4+ years of experience in SAP ABAP development and deep knowledge of SAP 4 HANA. His prowess in SAP solutions is unmatched, making him a key asset for any enterprise's SAP needs",
+  //  name: " Faizan Lodhi",
+   // status:"The SAP Sage",
+ // },
   // {
   //   team:" Moiz boasts 5 years of web development expertise in PHP and Javascript. His code weaves magic, turning web projects into captivating digital experiences.",
   //   name: " Moiz",
@@ -204,11 +204,11 @@ const team = [
   //   name: " Aamir",
   //   status:"The Web Artisan",
   // },
-  // {
-  //   team:"With 1 to 1.5 years of experience, Affan is not just a Software Engineer but also a Project Manager who ensures every project is a resounding success.",
-  //   name: " Affan Mirza",
-  //   status:"The Software Visionary",
-  // },
+   {
+    team:"With 1 to 1.5 years of experience, Affan is not just a Software Engineer but also a Project Manager who ensures every project is a resounding success.",
+     name: " Affan Mirza",
+     status:"The Software Visionary",
+   },
   // {
   //   team:"With over a year of experience, Hamza, a Software Engineer, is on a rapid trajectory towards becoming a formidable force in the world of IT.",
   //   name: " Hamza",

@@ -85,7 +85,7 @@ const Contact = () => {
           <br></br>
           <table>
           <ul className={styles.sectionSubText} > E-mail:</ul>
-          <div className="container space-x-2"> <img src={email} height="20px" width="30px" ></img><a href="mailto:ahmedtahir2000@gmail.com">ahmedtahir2000@gmail.com</a></div>
+          <div className="container space-x-2"> <img src={email} height="20px" width="30px" ></img><a href="mailto:ahmedtahir.developer@gmail.com ">ahmedtahir.developer@gmail.com </a></div>
           <ul className={styles.sectionSubText} > Phone:</ul>
           <div className="container space-x-2"> <img src={phone} height="20px" width="30px" ></img><a href="tel:0092-321-25-75665">0092-321-25-75665</a></div>
          </table>

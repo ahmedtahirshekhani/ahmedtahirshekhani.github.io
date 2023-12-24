@@ -41,14 +41,15 @@ const Feedbacks = () => {
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[100px]`}
       >
         <motion.div variants={textVariant()}>
-          <h2 className={styles.sectionHeadText} >Introducing Ecomise Tech:<p className={styles.sectionSubText}> Crafting Digital Excellence</p></h2>
+          <h2 className={styles.sectionHeadText} >Introducing Ecomise Tech </h2><p className={styles.sectionSubText}> Crafting Digital Excellence :</p>
           <p>In a world where digital presence is paramount, Ecomise Tech emerges as a beacon of innovation and expertise. We are not just an IT services provider; we are architects of digital transformation, dedicated to propelling your business to the forefront of the digital landscape.</p>
-          <p className={styles.sectionSubText}> Our Team of Pioneers:</p>
+          <br />
+          <p className={styles.sectionSubText}> Our Team of Pioneers :</p>
           <p>At Ecomise Tech, we understand that the heart of any successful venture lies in its people. Our team comprises seasoned professionals, each a master in their domain. Allow us to introduce you to the luminaries who fuel our success:</p>
           <h2 className={styles.sectionHeadText} >Team</h2>
         </motion.div>
       </div>
-      <div className={`-mt-10 pb-4 ${styles.paddingX} flex flex-wrap gap-7`}>
+      <div className={`-mt-10 pb-4 ${styles.paddingX} flex flex-wrap gap-5`}>
         {team.map((team, index) => (
           <FeedbackCard key={team.name} index={index} {...team} />
         ))}
