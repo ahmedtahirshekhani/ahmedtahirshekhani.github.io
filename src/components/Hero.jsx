@@ -30,8 +30,11 @@ const Hero = () => {
 
       <ComputersCanvas />
 
-      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center show'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 show'>
+        <div className="absolute text-white text-4xl font-semibold herodiv pt-40 mt-80">
+          <marquee>Welcome to My Portfolio Website.</marquee>
+        </div>
+      <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center '>
+          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 '>
             <motion.div
               animate={{
                 y: [0, 24, 0],
