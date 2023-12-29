@@ -56,9 +56,7 @@ const Hero = () => {
               className='w-3 h-3 rounded-full bg-secondary mb-1'
             />
           </div>
-              <div className="absolute  text-white text-4xl font-semibold herodiv pt-12 mt-40">
-                <marquee>Welcome to My Portfolio Website.</marquee>
-              </div>
+              
       </div>
     </section>
   );
