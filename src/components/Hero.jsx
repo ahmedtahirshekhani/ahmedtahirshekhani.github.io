@@ -29,10 +29,19 @@ const Hero = () => {
       </div>
 
       <ComputersCanvas />
+      <motion.div
+        className='absolute  bottom-3 pl-6 w-4/5 flex justify-center items-center herodiv'
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
+        <img
+          src="../giphy.gif" 
+          alt="Code"
+          className="w-full max-w-screen-sm mx-auto"
+        />
+      </motion.div>
 
-        <div className="absolute text-white text-4xl font-semibold herodiv pt-40 mt-80">
-          <marquee>Welcome to My Portfolio Website.</marquee>
-        </div>
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center '>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2 '>
             <motion.div
@@ -47,6 +56,9 @@ const Hero = () => {
               className='w-3 h-3 rounded-full bg-secondary mb-1'
             />
           </div>
+              <div className="absolute  text-white text-4xl font-semibold herodiv mt-44">
+                <marquee>Welcome to My Portfolio Website.</marquee>
+              </div>
       </div>
     </section>
   );
