@@ -30,7 +30,7 @@ const Hero = () => {
 
       <ComputersCanvas />
       <motion.div
-        className='absolute  bottom-3 pl-6 w-4/5 flex justify-center items-center herodiv'
+        className='absolute bottom-16 pl-6 w-11/12 flex justify-center items-center herodiv'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -56,7 +56,7 @@ const Hero = () => {
               className='w-3 h-3 rounded-full bg-secondary mb-1'
             />
           </div>
-              <div className="absolute  text-white text-4xl font-semibold herodiv mt-44">
+              <div className="absolute  text-white text-4xl font-semibold herodiv pt-12 mt-40">
                 <marquee>Welcome to My Portfolio Website.</marquee>
               </div>
       </div>
