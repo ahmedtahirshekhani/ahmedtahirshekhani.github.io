@@ -125,7 +125,7 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Data Science & MLOps Engineer (full time)",
+    title: "Data Science & MLOps Engineer ",
     company_name: "Careem (Uber Inc.)",
     icon: tesla,
     iconBg: "#383E56",
@@ -136,7 +136,7 @@ const experiences = [
     ],
   },
   {
-    title: "Lab/Software Developer (Part Time)",
+    title: "Software Developer ",
     company_name: "Al Nafi",
     icon: meta,
     iconBg: "#E6DEDD",
